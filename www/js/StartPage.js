@@ -1,9 +1,8 @@
 class StartPage extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.addRoute('/', 'Start');
   }
-
 
 }

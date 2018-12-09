@@ -1,6 +1,6 @@
 class AboutPage extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.addRoute('/about', 'About');
     this.addEvents({
@@ -9,11 +9,11 @@ class AboutPage extends Component {
     this.showDetails = false;
   }
 
-  unmount(){
+  unmount() {
     this.showDetails = false;
   }
 
-  toggleDetails(){
+  toggleDetails() {
     this.showDetails = !this.showDetails;
     this.render();
   }
