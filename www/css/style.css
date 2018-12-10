@@ -29,3 +29,11 @@ main {
 .footerinfo p{
 margin: 0;
 }
+
+.fas{
+  font-size: 4rem;
+}
+
+.game-bg{
+  background-color: blue;
+}
