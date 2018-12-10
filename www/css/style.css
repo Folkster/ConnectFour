@@ -7,3 +7,12 @@ body > div {
 main {
   flex: 1;
 }
+
+#startSideFrame {
+  background-color: #e9ecef;
+}
+
+#startSideImg {
+  max-width: 100%;
+  height: auto; 
+}
