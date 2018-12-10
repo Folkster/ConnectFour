@@ -5,24 +5,17 @@ class Board extends Component {
         this.gameBoard = [];
         this.i = 0;
         this.createSlots();
-        this.drawBoard();
+        
     }
 
     createSlots() {
         for (let x = 0; x <= 6; x++) {
             for (let y = 0; y <= 5; y++) {
-                this.gameBoard[this.i] = new Slot(x, y);
+                this.gameBoard[this.i] = new Slot(this, x, y);
                 this.i++;
             }
         }
 
     }
-
-    drawBoard() {
-        for (let x = 0; x < this.gameBoard.length; x++) {
-
-        }
-    }
-
 
 }
