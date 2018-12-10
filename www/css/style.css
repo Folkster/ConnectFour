@@ -7,3 +7,17 @@ body > div {
 main {
   flex: 1;
 }
+
+.node{
+  margin: 0;
+}
+
+.footerinfo{
+  display: flex;
+  justify-content: space-around;
+  font-size: 70%;
+}
+
+.footerinfo p{
+margin: 0;
+}
