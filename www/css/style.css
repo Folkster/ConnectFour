@@ -16,3 +16,16 @@ main {
   max-width: 100%;
   height: auto; 
 }
+.node{
+  margin: 0;
+}
+
+.footerinfo{
+  display: flex;
+  justify-content: space-around;
+  font-size: 70%;
+}
+
+.footerinfo p{
+margin: 0;
+}
