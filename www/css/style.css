@@ -30,10 +30,14 @@ main {
 margin: 0;
 }
 
-.fas{
+.slot{
   font-size: 4rem;
 }
 
 .game-bg{
   background-color: blue;
+}
+
+.boarddd{
+padding: 0;
 }
