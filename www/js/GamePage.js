@@ -8,22 +8,36 @@ class GamePage extends Component {
       'click .start-game': 'start'
     });
     this.showDetails = false;
-    this.changeNavBar = true;
     this.startGame = false;
+    this.playerFilled = false;
+    this.players = [];
   }
 
   unmount() {
     this.showDetails = false;
   }
 
-  changeNav() {
-    this.changeNavBar = true;
-    this.render();
-  }
 
   start() {
-    this.startGame = true;
-    this.render();
+    let playerName1 = this.baseEl.find('.name-field1').val();
+    let playerName2 = this.baseEl.find('.name-field2').val();
+    if(){
+      this.playerFilled = true;
+    }
+    if (playerName1.length >= 2 && playerName1.length <= 20 && playerName2.length >= 2 && playerName2.length <= 20) {
+      this.players.push(new Player(playerName1));
+      this.players.push(new Player(playerName2));
+      this.startGame = true;
+    
+      this.render();
+      console.log("if sats körd");
+    }
+    else{
+      alert('add player name between 2 and 20 characters');
+      this.render();
+      
+    }
+
   }
 
 }

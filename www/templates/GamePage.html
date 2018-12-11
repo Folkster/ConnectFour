@@ -1,31 +1,45 @@
 <main>
     <div class="jumbotron mt-3">
-            <h2 class="mb-2">Player One</h2>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Player Type</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Human</a>
-                        <a class="dropdown-item" href="#">Our advanced AI</a>
-                    </div>
-                </div>
+        <h2 class="mb-2">Player One</h2>
+        <div class="input-group">
+            <input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters">
+
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">Human</label>
             </div>
-            <h2 class="mb-2">Player Two</h2>
-            <div class="input-group">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Player Type</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Human</a>
-                        <a class="dropdown-item" href="#">Our advanced AI</a>
-                    </div>
-                </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">AI</label>
             </div>
-            <a href="/board" class="mt-5">
-                <button type="button" class="btn btn-success float-right start-game">Start Game</button>
-            </a>
+
+
         </div>
+        <h2 class="mb-2">Player Two</h2>
+        <div class="input-group">
+            <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline3">Human</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline4" name="customRadioInline3" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline4">AI</label>
+            </div>
+
+            
+        </div>
+
+
+
+        <div class="mt-2 float-right">
+            
+            ${this.startGame && this.playerFilled ? `<a href="/board"><button type="button" class="btn btn-success start-game">Start Game</button></a>`: `<a href="/play"><button type="button" class="btn btn-success start-game">Start Game</button></a>` }
+             
+             
+          
+        </div>
+    </div>
+
+    
 </main>

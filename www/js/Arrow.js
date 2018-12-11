@@ -14,7 +14,7 @@ class Arrow extends Component{
                 console.log("slot-"+this.col.slots[i].x+this.col.slots[i].y);
                 document.getElementById("slot-"+this.col.slots[i].x+this.col.slots[i].y).style.color = "red";
                 this.col.slots[i].isEmpty = false;
-                break;
+                return null;
             }
         }
     }
