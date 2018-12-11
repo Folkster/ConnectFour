@@ -2,8 +2,8 @@
     <div class="jumbotron mt-3">
         <h2 class="mb-2">Player One</h2>
         <div class="input-group">
-            <input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters">
-
+            ${this.startGame ? `<p class="lead">${this.players[0]}</p>` :
+            `<input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters">
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline1">Human</label>
@@ -11,35 +11,37 @@
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline2">AI</label>
-            </div>
-
-
+            </div>` }
         </div>
         <h2 class="mb-2">Player Two</h2>
         <div class="input-group">
-            <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters">
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
-                <label class="custom-control-label" for="customRadioInline3">Human</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline4" name="customRadioInline3" class="custom-control-input">
-                <label class="custom-control-label" for="customRadioInline4">AI</label>
-            </div>
+            ${this.startGame ? `<p>${this.players[1]}</p>` : `
+                <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">Human</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline4" name="customRadioInline3" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline4">AI</label>
+                </div>` }
 
-            
+
+
         </div>
 
 
 
-        <div class="mt-2 float-right">
-            
-            ${this.startGame && this.playerFilled ? `<a href="/board"><button type="button" class="btn btn-success start-game">Start Game</button></a>`: `<a href="/play"><button type="button" class="btn btn-success start-game">Start Game</button></a>` }
-             
-             
-          
+        <div class="mt-5">
+
+            ${this.startGame ? `<a href="/board"><button type="button" class="btn btn-warning start-game">Start Game</button></a>`:
+
+            `<a href="/play"><button type="button" class="btn btn-primary start-game">Add Players</button></a>` }
+
+
+
         </div>
     </div>
 
-    
+
 </main>
