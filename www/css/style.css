@@ -30,9 +30,9 @@ main {
 margin: 0;
 }
 
-.slot{
+/* .slot{
   font-size: 4rem;
-}
+} */
 
 .game-bg{
   background-color: blue;
@@ -40,4 +40,8 @@ margin: 0;
 
 .boarddd{
 padding: 0;
+}
+
+#slotOrArrow {
+  margin: 1rem 1rem 1rem 1rem;
 }
