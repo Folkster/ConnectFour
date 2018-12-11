@@ -4,6 +4,7 @@ class Col extends Component {
       super();
       this.board = board;
       this.x = x;
+      this.arrow = new Arrow(this);
       this.slots = [];
       this.createSlots();
     }
