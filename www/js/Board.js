@@ -2,9 +2,11 @@ class Board extends Component {
     constructor() {
         super();
         this.addRoute('/board', 'Connect 4 Game');
+       
         this.colArray = [];
         this.slotNbr = 1;
         this.createCols();
+
 
     }
 

@@ -4,5 +4,7 @@ class Slot extends Component{
         this.col = col;
         this.x = x;
         this.y = y;
+        this.isEmpty = true;
+        this.player;
     }
 }
