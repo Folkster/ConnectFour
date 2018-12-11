@@ -8,8 +8,8 @@ class Arrow extends Component{
     }
 
     arrowClick() {
-        
-        for(let i = this.col.slots.length-1; i=>0 ;i--){
+        console.log();
+        for(let i = this.col.slots.length-1; i>=0 ;i--){
             if(this.col.slots[i].isEmpty){
                 console.log("slot-"+this.col.slots[i].x+this.col.slots[i].y);
                 document.getElementById("slot-"+this.col.slots[i].x+this.col.slots[i].y).style.color = "red";
