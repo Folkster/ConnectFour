@@ -30,9 +30,6 @@ main {
 margin: 0;
 }
 
-/* .slot{
-  font-size: 4rem;
-} */
 
 .game-bg{
   background-color: blue;
@@ -42,10 +39,10 @@ margin: 0;
 padding: 0;
 }
 
-.slot {
+/* .slot {
   margin: 1rem 1rem 1rem 1rem;
 }
 
 .arrow {
   margin: 1rem 1rem 1rem 1rem;
-}
+} */
