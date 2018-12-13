@@ -2,8 +2,8 @@ class Game {
     constructor(theBoard) {
         this.board = theBoard;
         this.playerTurn = 'red';
+        this.winchecker = new Winchecker(this.board);
         App.game = this;
-        console.log(this.board.players);  
     }
 
 
@@ -15,7 +15,6 @@ nextTurn(){
     
     this.board.render();
     
-    console.log(this.playerTurn);
     }
 
 

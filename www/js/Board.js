@@ -17,7 +17,7 @@ class Board extends Component {
         }
         for (let i = 0; i<this.colArray.length; i++){
             for (let t = 0; t<this.colArray[i].slots.length; t++){
-                console.log("Slot " + this.slotNbr + " X:" + this.colArray[i].slots[t].x + " Y:" + this.colArray[i].slots[t].y);
+               
                 this.slotNbr++;
             }
         }
