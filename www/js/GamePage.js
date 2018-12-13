@@ -7,17 +7,16 @@ class GamePage extends Component {
       'click .start-game': 'start',
       'click .nav-switch': 'navSwitch'
     });
-    /*     this.showDetails = false; */
+    this.showDetails = false;
     this.startGame = false;
     this.players = [];
     this.pageContent = content;
     App.resetGamePage = this;
   }
 
-  // utkommenterad för att man ska få börja om på 
-  /*   unmount() {
-      this.showDetails = false;
-    } */
+  unmount() {
+    this.showDetails = false;
+  }
 
   valPlayer() {
     this.startGame = true;
