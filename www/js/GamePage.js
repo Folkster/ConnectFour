@@ -7,26 +7,26 @@ class GamePage extends Component {
       'click .start-game': 'start',
       'click .nav-switch': 'navSwitch'
     });
-    this.showDetails = false;
+    /*     this.showDetails = false; */
     this.startGame = false;
     this.players = [];
     this.pageContent = content;
+    App.resetGamePage = this;
   }
 
-  unmount() {
-    this.showDetails = false;
-  }
+  // utkommenterad för att man ska få börja om på 
+  /*   unmount() {
+      this.showDetails = false;
+    } */
 
   valPlayer() {
     this.startGame = true;
     this.render();
   }
 
-  navSwitch () {
+  navSwitch() {
     App.globalNav.render();
   }
-
-
 
   start() {
     let playerName1 = this.baseEl.find('.name-field1').val();
@@ -44,9 +44,6 @@ class GamePage extends Component {
     } else {
       alert('add player name between 2 and 20 characters');
       this.render();
-
     }
-
   }
-
 }

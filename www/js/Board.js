@@ -2,14 +2,11 @@ class Board extends Component {
     constructor(thePlayers) {
         super();
         this.addRoute('/board', 'Connect 4 Game');
-
         this.colArray = [];
         this.slotNbr = 1;
         this.players = thePlayers;
         this.createCols();
-
         this.game = new Game(this);
-
     }
 
     createCols() {
@@ -18,14 +15,9 @@ class Board extends Component {
         }
         for (let i = 0; i < this.colArray.length; i++) {
             for (let t = 0; t < this.colArray[i].slots.length; t++) {
-
                 this.slotNbr++;
             }
         }
     }
 
-    changeBackNav() {
-        App.changeNav = true;
-        App.globalNav.render();
-    }
 }

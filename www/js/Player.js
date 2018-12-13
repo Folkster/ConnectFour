@@ -1,9 +1,8 @@
-class Player extends Component{
+class Player extends Component {
 
-    constructor(name){
+    constructor(name) {
         super();
         this.name = name;
         console.log(name);
     }
-
 }
