@@ -5,9 +5,11 @@ class App extends Component {
     this.navBar = new NavBar();
     this.pageContent = new PageContent();
     this.footer = new Footer();
+    this.changeNav = false;
     // only in the App class:
     new Router(this.pageContent);
     $('body').html(this.render());
   }
+
 
 }

@@ -7,8 +7,9 @@ class NavBar extends Component {
       new NavItem('Play Game', '/play'),
       new NavItem('Rules', '/rules'),
       new NavItem('Highscores', '/highscores'),
-      new NavItem('Quit Game', '/')
+      new NavItem('Quit Game', '/play')
     ];
+    App.globalNav = this;
 
   }
 

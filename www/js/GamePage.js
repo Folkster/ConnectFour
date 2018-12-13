@@ -4,7 +4,8 @@ class GamePage extends Component {
     super();
     this.addRoute('/play', 'Play Game');
     this.addEvents({
-      'click .start-game': 'start'
+      'click .start-game': 'start',
+      'click .nav-switch': 'navSwitch'
     });
     this.showDetails = false;
     this.startGame = false;
@@ -21,6 +22,10 @@ class GamePage extends Component {
     this.render();
   }
 
+  navSwitch () {
+    App.globalNav.render();
+  }
+
 
 
   start() {
@@ -34,7 +39,7 @@ class GamePage extends Component {
       this.players.push(new Player(playerName1));
       this.players.push(new Player(playerName2));
       this.valPlayer();
-      
+      App.changeNav = true;
       this.render();
     } else {
       alert('add player name between 2 and 20 characters');
