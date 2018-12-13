@@ -4,7 +4,6 @@ class GamePage extends Component {
     super();
     this.addRoute('/play', 'Play Game');
     this.addEvents({
-      'click .change-nav': 'changeNav',
       'click .start-game': 'start'
     });
     this.showDetails = false;
@@ -35,6 +34,7 @@ class GamePage extends Component {
       this.players.push(new Player(playerName1));
       this.players.push(new Player(playerName2));
       this.valPlayer();
+      
       this.render();
     } else {
       alert('add player name between 2 and 20 characters');

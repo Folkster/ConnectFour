@@ -8,6 +8,7 @@ class NavBar extends Component {
       new NavItem('Rules', '/rules'),
       new NavItem('Highscores', '/highscores')
     ];
+
   }
 
 }
