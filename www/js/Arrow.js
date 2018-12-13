@@ -3,9 +3,9 @@ class Arrow extends Component{
         super();
         this.col = col;
         this.addEvents({
-            'click .arrow': 'arrowClick',
-            'click .next-turn': 'switchPlayer'
-          });
+            'click .next-turn': 'arrowClick',
+/*             'click .next-turn': 'switchPlayer'
+ */          });
     }
 
     arrowClick() {
@@ -14,6 +14,7 @@ class Arrow extends Component{
             if(this.col.slots[i].color===''){
                /* console.log("slot-"+this.col.slots[i].x+this.col.slots[i].y);*/
                 this.col.slots[i].color = App.game.playerTurn;
+                this.switchPlayer();
                 break;
             }
         }
