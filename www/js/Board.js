@@ -8,7 +8,7 @@ class Board extends Component {
         this.players = thePlayers;
         this.createCols();
         this.game = new Game(this);
-    }
+    } 
 
     createCols() {
         for (let x = 0; x <= 6; x++) {
@@ -20,5 +20,7 @@ class Board extends Component {
             }
         }
     }
+
+    
 
 }
