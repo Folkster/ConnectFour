@@ -17,5 +17,4 @@ class RulesPage extends Component {
     this.showDetails = !this.showDetails;
     this.render();
   }
-
 }

@@ -10,6 +10,4 @@ class App extends Component {
     new Router(this.pageContent);
     $('body').html(this.render());
   }
-
-
 }

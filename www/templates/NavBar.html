@@ -6,21 +6,19 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    ${ App.changeNav ? `
     <ul class="navbar-nav mr-auto">
-      ${ App.changeNav ? `
       ${this.navItems[0]}
-      ${this.navItems[4]}
+      <div class="nav-switch-back">${this.navItems[4]}</div>
       ${this.navItems[2]}
-      ${this.navItems[3]}` : `
-
+      ${this.navItems[3]}
+    </ul>` : `
+    <ul class="navbar-nav mr-auto">
       ${this.navItems[0]}
       ${this.navItems[1]}
       ${this.navItems[2]}
       ${this.navItems[3]}
-      `}
-
-
-
     </ul>
+    `}
   </div>
 </nav>

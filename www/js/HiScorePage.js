@@ -1,6 +1,6 @@
-class HiScorePage extends Component{
+class HiScorePage extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.addRoute('/highscores', 'Highscores');
     }

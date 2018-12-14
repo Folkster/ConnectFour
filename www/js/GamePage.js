@@ -11,6 +11,7 @@ class GamePage extends Component {
     this.startGame = false;
     this.players = [];
     this.pageContent = content;
+    App.resetGamePage = this;
   }
 
   unmount() {
@@ -22,11 +23,9 @@ class GamePage extends Component {
     this.render();
   }
 
-  navSwitch () {
+  navSwitch() {
     App.globalNav.render();
   }
-
-
 
   start() {
     let playerName1 = this.baseEl.find('.name-field1').val();
@@ -44,9 +43,6 @@ class GamePage extends Component {
     } else {
       alert('add player name between 2 and 20 characters');
       this.render();
-
     }
-
   }
-
 }

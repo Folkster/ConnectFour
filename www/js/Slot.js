@@ -1,4 +1,4 @@
-class Slot extends Component{
+class Slot extends Component {
     constructor(col, x, y) {
         super();
         this.col = col;

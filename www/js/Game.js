@@ -7,19 +7,12 @@ class Game {
     }
 
 
-nextTurn(){
-    if (this.playerTurn === 'red'){
-        this.playerTurn = 'yellow';
+    nextTurn() {
+        if (this.playerTurn === 'red') {
+            this.playerTurn = 'yellow';
+        } else {
+            this.playerTurn = 'red'
+        }
+        this.board.render();
     }
-    else { this.playerTurn = 'red'}
-    
-    this.board.render();
-    
-    }
-
-
-
-
-
-
 }

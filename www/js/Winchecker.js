@@ -1,17 +1,16 @@
+class Winchecker {
 
-class Winchecker{
-    
-    constructor(board){ 
+    constructor(board) {
         this.board = board;
     }
 
-    check(slot){
+    check(slot) {
         this.checkHorisontal(slot);
-    
+
     }
 
-    checkHorisontal(slot){
-        
+    checkHorisontal(slot) {
+
 
         let xPos = slot.x;
         let yPos = slot.y;
@@ -19,35 +18,19 @@ class Winchecker{
         let counter = 1;
         console.log('checking...' + color);
         console.log(App.game.board.colArray[xPos].slots[yPos]);
-        if(color === App.game.board.colArray[(xPos+1)].slots[yPos].color){
+        if (color === App.game.board.colArray[(xPos + 1)].slots[yPos].color) {
             console.log('TWO IN A ROW-RIGHT');
         }
+    }
 
+    checkVertical() {
 
     }
 
-    checkVertical(){
+    checkDiagonalRight() {
 
     }
-
-    checkDiagonalRight(){
-        
-    }
-    checkDiagonalLeft(){
+    checkDiagonalLeft() {
 
     }
-
-   
 }
-
-
-
-
-    
-
-
-
-
-
-
-

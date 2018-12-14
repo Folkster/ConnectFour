@@ -8,7 +8,6 @@ class PageContent extends Component {
     this.board = '';
     this.rulesPage = new RulesPage();
     this.missingPage = new MissingPage();
-
   }
 
 }

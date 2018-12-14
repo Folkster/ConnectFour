@@ -11,20 +11,15 @@ class NavItem extends Component {
     //App.gameNavItem = this;
   }
 
-  changeNav(){
-    if(this.name === 'Play Game'){
+  changeNav() {
+    if (this.name === 'Play Game') {
       this.name = 'Quit Game';
       this.changeNavItemName = true;
       this.render();
-      }
-      else if(this.changeNavItemName && this.name === 'Quit Game'){
-        this.name = 'Play Game';
-        this.changeNavItemName = false;
-        this.render();
-      }
+    } else if (this.changeNavItemName && this.name === 'Quit Game') {
+      this.name = 'Play Game';
+      this.changeNavItemName = false;
+      this.render();
     }
   }
-
-
-
-
+}
