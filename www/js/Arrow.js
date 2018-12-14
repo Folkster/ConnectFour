@@ -16,6 +16,7 @@ class Arrow extends Component {
             }
         }
     }
+    
     switchPlayer() {
         App.game.nextTurn();
     }

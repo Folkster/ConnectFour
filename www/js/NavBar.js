@@ -18,9 +18,6 @@ class NavBar extends Component {
   changeBackNav() {
     App.changeNav = false;
     App.globalNav.render();
-    // vi bör för semantikens skull döpa om variabeln nedan senare
-    // blev lite weird naming convention i detta sammanhanget
-    // Sean
     App.resetGamePage.startGame = false;
     App.resetGamePage.render();
   }

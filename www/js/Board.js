@@ -1,4 +1,5 @@
 class Board extends Component {
+    
     constructor(thePlayers) {
         super();
         this.addRoute('/board', 'Connect 4 Game');

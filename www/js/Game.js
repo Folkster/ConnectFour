@@ -1,4 +1,5 @@
 class Game {
+    
     constructor(theBoard) {
         this.board = theBoard;
         this.playerTurn = 'red';
