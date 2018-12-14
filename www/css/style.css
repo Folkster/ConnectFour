@@ -4,24 +4,22 @@ body > div {
   flex-direction: column;
 }
 
-main {
-  flex: 1;
+body{
+
 }
 
-#startSidePanel {
-  background-color: #e9ecef;
+main {
+  flex: 1;
+
 }
 
 #startSideImg {
-  max-width: 100%;
+  width: 600%;
   height: auto; 
-}
-.node{
-  margin: 0;
 }
 
 .footerinfo{
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   font-size: 70%;
 }
@@ -32,17 +30,68 @@ margin: 0;
 
 
 .game-bg{
-  background-color: blue;
+  background-color: rgba(0, 38, 143, 0.849);
 }
 
-.boarddd{
-padding: 0;
+.the-board{
+  justify-content: center;
 }
 
-/* .slot {
-  margin: 1rem 1rem 1rem 1rem;
+.next-turn{
+  color: #343a40;
 }
 
-.arrow {
-  margin: 1rem 1rem 1rem 1rem;
-} */
+.next-turn:hover{
+  color: #192430;
+}
+
+
+.jumbotron{
+  padding: 15px 20px 15px 20px;
+}
+
+.highscore-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.highscore-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.highscore-content p{
+  margin: 0;
+  padding: 5px;
+  font-size: 130%;
+}
+
+.highscore-content:hover{
+  background-color: rgb(243, 243, 243)
+}
+
+.top-content-break {
+  margin: 10px;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)), color-stop(50%, rgb(192, 192, 192)));
+}
+
+.slot{
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .slot{
+    font-size: 20px;
+  }
+  .arrow{
+    font-size: 20px;
+  }
+  .footerinfo{
+    display:flex;
+    flex-direction: column;
+  }
+}
+
