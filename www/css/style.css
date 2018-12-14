@@ -10,7 +10,6 @@ body{
 
 main {
   flex: 1;
-
 }
 
 #startSideImg {
@@ -82,6 +81,16 @@ margin: 0;
   color: white;
 }
 
+.btn-sm:link, .btn-sm:visited {
+  text-decoration: none;
+}
+
+.btn-sm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
 @media screen and (max-width: 992px) {
   .slot{
     font-size: 20px;
@@ -94,4 +103,6 @@ margin: 0;
     flex-direction: column;
   }
 }
+
+
 
