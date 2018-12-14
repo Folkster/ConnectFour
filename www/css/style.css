@@ -79,10 +79,14 @@ margin: 0;
 
 @media screen and (max-width: 992px) {
   .slot{
-    font-size: 20px;
+    font-size: 40px;
   }
   .arrow{
-    font-size: 20px;
+    font-size: 40px;
+  }
+  .the-board{
+    justify-content: space-between;
+    margin-right: 25px;
   }
   .footerinfo{
     display:flex;
