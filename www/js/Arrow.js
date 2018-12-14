@@ -14,8 +14,6 @@ class Arrow extends Component {
             if (this.col.slots[i].color === '') {
                 /* console.log("slot-"+this.col.slots[i].x+this.col.slots[i].y);*/
                 this.col.slots[i].color = App.game.playerTurn;
-                App.game.winchecker.check(this.col.slots[i]);
-
                 this.switchPlayer();
 
                 break;
