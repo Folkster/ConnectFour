@@ -4,9 +4,6 @@ body > div {
   flex-direction: column;
 }
 
-body{
-  overflow-y: overlay;
-}
 
 main {
   flex: 1;
@@ -48,14 +45,6 @@ margin: 0;
   color: #192430;
 }
 
-/* .slot {
-  margin: 1rem 1rem 1rem 1rem;
-}
-
-.arrow {
-  margin: 1rem 1rem 1rem 1rem;
-} */
-
 
 .jumbotron{
   padding: 15px 20px 15px 20px;
@@ -91,5 +80,14 @@ margin: 0;
 
 .slot{
   color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .slot{
+    font-size: 20px;
+  }
+  .arrow{
+    font-size: 20px;
+  }
 }
 
