@@ -3,12 +3,10 @@ class NavItem extends Component {
   constructor(name, url) {
     super();
     this.addEvents({
-      // 'click .change-nav': 'changeNav'
     });
     this.name = name;
     this.url = url;
     this.changeNavItemName = false;
-    //App.gameNavItem = this;
   }
 
   changeNav() {
