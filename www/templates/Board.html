@@ -1,17 +1,10 @@
-
 <div>
     ${App.game.playerTurn === 'red' ? `<h3 class="text-center">${this.players[0].name}</h3>` :  `<h3 class="text-center">${this.players[1].name}</h3>` }
-   
-
-    
-<div class="container game-bg text-center m-0 p-3 pr-5">
-    
-    
-    
-    <div class="row d-flex justify-content-center">
-    ${this.colArray}
-</div>
-
-</div>
+  
+    <div class="container rounded game-bg text-center m-0 p-3">
+        <div class="row d-flex the-board">
+            ${this.colArray}
+        </div>
+    </div>
         
 </div>
