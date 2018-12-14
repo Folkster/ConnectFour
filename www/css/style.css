@@ -4,6 +4,9 @@ body > div {
   flex-direction: column;
 }
 
+body{
+
+}
 
 main {
   flex: 1;
@@ -14,12 +17,9 @@ main {
   width: 600%;
   height: auto; 
 }
-.node{
-  margin: 0;
-}
 
 .footerinfo{
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   font-size: 70%;
 }
@@ -88,6 +88,10 @@ margin: 0;
   }
   .arrow{
     font-size: 20px;
+  }
+  .footerinfo{
+    display:flex;
+    flex-direction: column;
   }
 }
 
