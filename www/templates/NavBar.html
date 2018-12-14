@@ -8,16 +8,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     ${ App.changeNav ? `
     <ul class="navbar-nav mr-auto">
-      <a href="#" class="btn-sm btn-secondary">${this.navItems[0].name}</a>
-      <a href="${this.navItems[1].url}" class="btn-sm btn-warning nav-switch-back">${this.navItems[4].name}</a>
-      <a href="#" class="btn-sm btn-secondary">${this.navItems[2].name}</a>
-      <a href="#" class="btn-sm btn-secondary">${this.navItems[3].name}</a>
+      <a href="#" class="btn-sm btn-secondary mr-2">${this.navItems[0].name}</a>
+      <a href="${this.navItems[1].url}" class="mr-2 btn-sm btn-warning nav-switch-back">${this.navItems[4].name}</a>
+      <a href="#" class="btn-sm btn-secondary mr-2">${this.navItems[2].name}</a>
+      <a href="#" class="btn-sm btn-secondary mr-2">${this.navItems[3].name}</a>
     </ul>` : `
-    <ul class="navbar-nav mr-auto">
-      <a href="${this.navItems[0].url}" class="btn-sm btn-secondary">${this.navItems[0].name}</a>
-      <a href="${this.navItems[1].url}" class="btn-sm btn-secondary">${this.navItems[1].name}</a>
-      <a href="${this.navItems[2].url}" class="btn-sm btn-secondary">${this.navItems[2].name}</a>
-      <a href="${this.navItems[3].url}" class="btn-sm btn-secondary">${this.navItems[3].name}</a>
+    <ul class="navbar-nav mr-3">
+      <a href="${this.navItems[0].url}" class="mr-2 btn-sm btn-secondary">${this.navItems[0].name}</a>
+      <a href="${this.navItems[1].url}" class="mr-2 btn-sm btn-secondary">${this.navItems[1].name}</a>
+      <a href="${this.navItems[2].url}" class="mr-2 btn-sm btn-secondary">${this.navItems[2].name}</a>
+      <a href="${this.navItems[3].url}" class="mr-2 btn-sm btn-secondary">${this.navItems[3].name}</a>
     </ul>
     `}
   </div>
