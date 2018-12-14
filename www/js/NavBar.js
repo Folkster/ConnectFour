@@ -15,6 +15,7 @@ class NavBar extends Component {
   }
 
   changeBackNav() {
+    App.board.players = [];
     App.changeNav = false;
     App.globalNav.render();
     App.resetGamePage.startGame = false;
