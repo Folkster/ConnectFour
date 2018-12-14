@@ -4,10 +4,6 @@ body > div {
   flex-direction: column;
 }
 
-body{
-
-}
-
 main {
   flex: 1;
 }
@@ -18,7 +14,6 @@ main {
 }
 
 .footerinfo{
-  /* display: flex; */
   justify-content: space-around;
   font-size: 70%;
 }
