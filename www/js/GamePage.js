@@ -39,9 +39,10 @@ class GamePage extends Component {
       this.players.push(new Player(playerName2));
       this.valPlayer();
       App.changeNav = true;
+      this.unmount();
       this.render();
     } else {
-      alert('add player name between 2 and 20 characters');
+      this.showDetails = true;
       this.render();
     }
   }
