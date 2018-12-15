@@ -10,7 +10,6 @@ body{
 
 main {
   flex: 1;
-
 }
 
 #startSideImg {
@@ -21,7 +20,7 @@ main {
 .footerinfo{
   /* display: flex; */
   justify-content: space-around;
-  font-size: 70%;
+  font-size: 1rem;
 }
 
 .footerinfo p{
@@ -79,7 +78,27 @@ margin: 0;
 }
 
 .slot{
-  color: white;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.btn:link, .btn-sm:visited {
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.test-footer {
+  color: rgba(255, 255, 255, 0.616);
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.size-fix img {
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 992px) {

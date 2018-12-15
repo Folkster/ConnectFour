@@ -1,6 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i
-      class="fas fa-circle"></i></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1 pl-3">
+  <a class="navbar-brand" href="#">
+    <!-- OLD LOGO -->
+      <!-- </nav><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+      class="fas fa-circle"></i> -->
+    <picture class="size-fix">
+      <img src="img/logo.jpg" alt="logo" class="img-thumbnail">
+    </picture>
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,17 +14,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     ${ App.changeNav ? `
     <ul class="navbar-nav mr-auto">
-      <a href="#" class="btn-sm btn-secondary">${this.navItems[0].name}</a>
-      <a href="${this.navItems[1].url}" class="btn-sm btn-warning nav-switch-back">${this.navItems[4].name}</a>
-      <a href="#" class="btn-sm btn-secondary">${this.navItems[2].name}</a>
-      <a href="#" class="btn-sm btn-secondary">${this.navItems[3].name}</a>
+      <a href="#" class="btn btn-secondary mr-3">${this.navItems[0].name}</a>
+      <a href="${this.navItems[1].url}" class="mr-3 btn btn-danger nav-switch-back">${this.navItems[4].name}</a>
+      <a href="#" class="btn btn-secondary mr-3">${this.navItems[2].name}</a>
+      <a href="#" class="btn btn-secondary mr-3">${this.navItems[3].name}</a>
     </ul>` : `
     <ul class="navbar-nav mr-auto">
-      <a href="${this.navItems[0].url}" class="btn-sm btn-secondary">${this.navItems[0].name}</a>
-      <a href="${this.navItems[1].url}" class="btn-sm btn-secondary">${this.navItems[1].name}</a>
-      <a href="${this.navItems[2].url}" class="btn-sm btn-secondary">${this.navItems[2].name}</a>
-      <a href="${this.navItems[3].url}" class="btn-sm btn-secondary">${this.navItems[3].name}</a>
+      <a href="${this.navItems[0].url}" class="mr-3 btn btn-secondary">${this.navItems[0].name}</a>
+      <a href="${this.navItems[1].url}" class="mr-3 btn btn-secondary">${this.navItems[1].name}</a>
+      <a href="${this.navItems[2].url}" class="mr-3 btn btn-secondary">${this.navItems[2].name}</a>
+      <a href="${this.navItems[3].url}" class="mr-3 btn btn-secondary">${this.navItems[3].name}</a>
     </ul>
     `}
   </div>
-</nav>
