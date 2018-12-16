@@ -1,3 +1,14 @@
+:root {
+  /* COLOR SCHEME:  */
+      --FOURPINK:      #F78888;
+      --FOURYELLOW:    #F3D250;
+      --FOURLIGHTGREY: #ECECEC;
+      --FOURLIGHTBLUE: #90CCF4;
+      --FOURBLUE:      #5DA2D5;
+}
+
+
+
 body>div {
   display: flex;
   min-height: 100vh;
@@ -9,6 +20,31 @@ body {}
 main {
   flex: 1;
 }
+
+header {
+  background-color: var(--FOURBLUE);
+}
+
+footer {
+  background-color: var(--FOURPINK);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;  
+}
+a:visited{
+  color: inherit;
+  text-decoration: none;  
+}
+
+a:hover{
+  color: white;
+  text-decoration: none;  
+}
+
+
+
 
 #startSideImg {
   width: 600%;
@@ -25,9 +61,8 @@ main {
   margin: 0;
 }
 
-
 .game-bg {
-  background-color: rgba(0, 38, 143, 0.849);
+  background-color: var(--FOURLIGHTBLUE);
 }
 
 .the-board {
@@ -39,7 +74,7 @@ main {
 }
 
 .next-turn:hover {
-  color: #192430;
+  color: var(--FOURLIGHTGREY);
 }
 
 
@@ -64,7 +99,7 @@ main {
 }
 
 .highscore-content:hover {
-  background-color: rgb(243, 243, 243)
+  background-color: var(--FOURPINK);
 }
 
 .top-content-break {
@@ -88,12 +123,6 @@ main {
   transform: translateY(-1px);
   box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.2);
   text-decoration: none;
-}
-
-.test-footer {
-  color: rgba(255, 255, 255, 0.616);
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
 }
 
 .size-fix img {
