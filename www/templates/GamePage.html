@@ -1,8 +1,9 @@
 <main>
-    <div class="jumbotronp-3">
+ 
 
         <div class="container row">
-            <div class="input-group col-md-6 col-sm-12">
+            <div class="input-group py-2 col-md-6 col-sm-12">
+                
                 <h2 class="mb-2 col-12 mt-3 p-0">Player One</h2>
                 ${this.startGame ? `<p class="lead">${this.players[0]}</p>` :
                 `<input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters" value="player1">
@@ -17,8 +18,8 @@
                     </div>
                 </div>` }
             </div>
-            <div class="input-group col-md-6 col-sm-12">
-                <h2 class="mb-2 col-12 p-0">Player Two</h2>
+            <div class="input-group py-2 col-md-6 col-sm-12">
+                <h2 class="mb-2  col-12 mt-3 p-0">Player Two</h2>
                 ${this.startGame ? `<p class="lead">${this.players[1]}</p>` : `
                 <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters" value="player2">
                 <div class="col-12 mt-2 p-0">
@@ -40,5 +41,5 @@
                     Game</button></a>`:
             `<a href="/play"><button type="button" class="btn btn-primary start-game">Add Players</button></a>` }
         </div>
-    </div>
+
 </main>
