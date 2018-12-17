@@ -148,11 +148,6 @@ a:hover{
   .arrow {
     font-size: 50px;
   }
-
-  .footerinfo {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 737px) {
