@@ -13,8 +13,6 @@ class Game {
         } else {
             App.game.playerTurn = 'red'
         }
-        console.log(App.game.board.colArray);
         this.board.render();
-
     }
 }

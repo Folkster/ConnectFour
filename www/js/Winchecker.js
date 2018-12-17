@@ -20,8 +20,17 @@ class Winchecker {
         if(slot.y>=3){
             this.checkVertical();
         }
-        if(slot.x<=3 && slot.y>=4) {
+        if(slot.x<=3 && slot.y>=3) {
             this.checkDiagonalDownRight();
+        }
+        if(slot.x<=3 && slot.y<=2) {
+          this.checkDiagonalUpRight();
+        }
+        if(slot.x>=3 && slot.y>=3) {
+            this.checkDiagonalDownLeft();
+        }
+        if(slot.x>=3 && slot.y<=2) {
+          this.checkDiagonalUpLeft();
         }
         
 
@@ -54,6 +63,7 @@ class Winchecker {
             }
         }
     }
+
     checkVertical() {
         let counter = 0;
         for(let i = this.yPos;i>=0;i--){
@@ -72,8 +82,7 @@ class Winchecker {
         let counter = 0;
         let horiz = this.xPos;
         for(let i = this.yPos;i>=0;i--){
-            if (this.color === App.game.board.colArray[(horiz)].slots[i].color)  {
-                horiz++;
+            if (this.color === App.game.board.colArray[(horiz++)].slots[i].color)  {
                 counter++;
             } else break;
             if (counter === 4){
@@ -82,19 +91,52 @@ class Winchecker {
                 break;
             }
         }
-
     }
 
     checkDiagonalUpRight() {
-
+        let counter = 0;
+        let horiz = this.xPos;
+        for(let i = this.yPos ; i<=5 ; i++){
+            if (this.color === App.game.board.colArray[(horiz++)].slots[i].color)  {
+                counter++;
+            } else break;
+            if (counter === 4){
+                console.log('FOUR IN A ROW-UP-RIGHT');
+                this.win();
+                break;
+            }
+        }    
     }
     checkDiagonalDownLeft() {
-
+        let counter = 0;
+        let horiz = this.xPos;
+        for(let i = this.yPos;i>=0;i--){
+            if (this.color === App.game.board.colArray[(horiz--)].slots[i].color)  {
+                counter++;
+            } else break;
+            if (counter === 4){
+                console.log('FOUR IN A ROW-DOWN-LEFT');
+                this.win();
+                break;
+            }
+        }
     }
 
     checkDiagonalUpLeft() {
-
+        let counter = 0;
+        let horiz = this.xPos;
+        for(let i = this.yPos ; i<=5 ; i++){
+            if (this.color === App.game.board.colArray[(horiz--)].slots[i].color)  {
+                counter++;
+            } else break;
+            if (counter === 4){
+                console.log('FOUR IN A ROW-UP-LEFT');
+                this.win();
+                break;
+            }
+        }  
     }
+    
     win() {
         if(this.color==='red'){
             console.log('WINNER: ' + this.board.players[0].name);
