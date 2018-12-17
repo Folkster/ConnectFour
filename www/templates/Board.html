@@ -1,5 +1,9 @@
 <div>
-    ${App.game.playerTurn === 'red' ? `<h3 class="text-center">Player: ${this.players[0].name} has made ${this.players[0].moves} moves.</h3>` :  `<h3 class="text-center">Player: ${this.players[1].name} has made ${this.players[1].moves} moves.</h3>` }
+    ${App.game.playerTurn === 'red' ? `<h3 class="text-center">${this.players[0].name}</h3>` :  `<h3 class="text-center">${this.players[1].name}</h3>` }
+    <div class="justify-content-around row pl-5 pr-5">
+    <h4 class="text-center text-danger">${this.players[0].name} moves ${this.players[0].moves} moves.</h4>
+    <h4 class="text-center text-warning">${this.players[1].name} moves ${this.players[1].moves} moves.</h4>
+</div>
     <div class="container rounded game-bg text-center m-0 p-3">
         <div class="row d-flex the-board">
             ${this.colArray}
@@ -8,5 +12,5 @@
    
     <div class="text-center">
     <button type="button" class="play-again btn btn-primary">Play again</button>
-</div>
+    </div>
 </div>
