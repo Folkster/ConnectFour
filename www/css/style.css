@@ -149,6 +149,9 @@ a:hover{
     font-size: 50px;
   }
 
+   .rematch{
+     margin-right: 3rem;
+   }
  
 
 
@@ -179,5 +182,9 @@ a:hover{
   .footerinfo {
     display: flex;
     flex-direction: column;
+  }
+
+  .rematch{
+    margin-right: 0;
   }
 }
