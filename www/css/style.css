@@ -140,7 +140,7 @@ a:hover{
   border-radius: 50px;
 }
 
-@media screen and (min-width: 738px) {
+
   .slot {
     font-size: 50px;
   }
@@ -148,9 +148,14 @@ a:hover{
   .arrow {
     font-size: 50px;
   }
-}
 
-@media screen and (max-width: 737px) {
+   .rematch{
+     margin-right: 3rem;
+   }
+ 
+
+
+@media screen and (max-width: 767px) {
   .slot {
     font-size: 40px;
   }
@@ -177,5 +182,9 @@ a:hover{
   .footerinfo {
     display: flex;
     flex-direction: column;
+  }
+
+  .rematch{
+    margin-right: 0;
   }
 }
