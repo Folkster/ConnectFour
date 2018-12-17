@@ -2,39 +2,52 @@ class Winchecker {
 
     constructor(board) {
         this.board = board;
+        this.xPos;
+        this.yPos;
+        this.color;
     }
 
     check(slot) {
+        this.xPos = slot.x;
+        this.yPos = slot.y;
+        this.color = slot.color;
         if(slot.x<6){
-            this.checkRight(slot);
+            this.checkRight();
+        }
+        if(slot.x>0){
+            this.checkLeft();
         }
         
 
     }
 
-    checkRight(slot) {
-        let xPos = slot.x;
-        let yPos = slot.y;
-        let color = slot.color;
+    checkRight() {
         let counter = 0;
-        console.log(App.game.board.colArray[xPos].slots[yPos]);
-        for(xPos;xPos<=6;xPos++){
-            if (color === App.game.board.colArray[(xPos)].slots[yPos].color)  {
+        for(let i = this.xPos; i<=6 ;i++){
+            if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color)  {
                 counter++;
-            }
+            } else break;
             if (counter === 4){
                 console.log('FOUR IN A ROW-RIGHT');
-                if(color==='red'){
-                    console.log('WINNER: ' + this.board.players[0].name);
-                } else {
-                    console.log('WINNER: ' + this.board.players[1].name);
-                }
+                this.win();
                 break;
             }
         }
-        
     }
 
+    checkLeft (){
+        let counter = 0;
+        for(let i = this.xPos;i>=0;i--){
+            if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color)  {
+                counter++;
+            } else break;
+            if (counter === 4){
+                console.log('FOUR IN A ROW-LEFT');
+                this.win();
+                break;
+            }
+        }
+    }
     checkVertical() {
 
     }
@@ -46,5 +59,13 @@ class Winchecker {
 
     }
 
-    
+    win() {
+        if(this.color==='red'){
+            console.log('WINNER: ' + this.board.players[0].name);
+        } else {
+            console.log('WINNER: ' + this.board.players[1].name);
+        }
+    }
+
+
 }
