@@ -2,6 +2,9 @@ class Board extends Component {
     constructor(thePlayers) {
         super();
         this.addRoute('/board', 'Connect 4 Game');
+        this.addEvents({
+            'click .play-again': 'playAgain'
+          });
         this.colArray = [];
         this.players = thePlayers;
         this.createCols();
@@ -15,4 +18,8 @@ class Board extends Component {
         
     }
 
+    playAgain(){
+        //logik häääär
+    }
+    
 }

@@ -28,6 +28,7 @@ class GamePage extends Component {
   }
 
   start() {
+
     let playerName1 = this.baseEl.find('.name-field1').val();
     let playerName2 = this.baseEl.find('.name-field2').val();
 
