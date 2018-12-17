@@ -1,18 +1,11 @@
 <section class="container" id="highscores">
 
   <h1 class="display-4 text-center mb-3">Highscores</h1>
-  
-    <div class="row highscore-top lead p-2">
-      <h3 class="pl-3">NAME</h3>
-      <h3 class="pr-3">MOVES</h3>
-  </div>
-
   <hr class="top-content-break">
-  <div class="row highscore-content lead">
-    
-      <p>${this.playerNames[0]}</p>
-      <p>${this.playerScores[0]}</p>
 
+  <div class="d-flex justify-content-between pr-5 pl-5">
+    <h2>Name</h2>
+    <h2>Moves</h2>
   </div>
-   
+  <div>${this.highScores}</div>
 </section>
