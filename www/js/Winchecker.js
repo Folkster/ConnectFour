@@ -11,11 +11,14 @@ class Winchecker {
         this.xPos = slot.x;
         this.yPos = slot.y;
         this.color = slot.color;
-        if(slot.x<6){
+        if(slot.x<=3){
             this.checkRight();
         }
-        if(slot.x>0){
+        if(slot.x>=3){
             this.checkLeft();
+        }
+        if(slot.y>=3){
+            this.checkVertical();
         }
         
 
@@ -49,7 +52,17 @@ class Winchecker {
         }
     }
     checkVertical() {
-
+        let counter = 0;
+        for(let i = this.yPos;i>=0;i--){
+            if (this.color === App.game.board.colArray[(this.xPos)].slots[i].color)  {
+                counter++;
+            } else break;
+            if (counter === 4){
+                console.log('FOUR IN A ROW-VERTICAL');
+                this.win();
+                break;
+            }
+        }
     }
 
     checkDiagonalRight() {
