@@ -5,22 +5,34 @@ class Winchecker {
     }
 
     check(slot) {
-        this.checkHorisontal(slot);
+        if(slot.x<6){
+            this.checkRight(slot);
+        }
+        
 
     }
 
-    checkHorisontal(slot) {
-
-
+    checkRight(slot) {
         let xPos = slot.x;
         let yPos = slot.y;
         let color = slot.color;
-        let counter = 1;
-        console.log('checking...' + color);
+        let counter = 0;
         console.log(App.game.board.colArray[xPos].slots[yPos]);
-        if (color === App.game.board.colArray[(xPos + 1)].slots[yPos].color) {
-            console.log('TWO IN A ROW-RIGHT');
+        for(xPos;xPos<=6;xPos++){
+            if (color === App.game.board.colArray[(xPos)].slots[yPos].color)  {
+                counter++;
+            }
+            if (counter === 4){
+                console.log('FOUR IN A ROW-RIGHT');
+                if(color==='red'){
+                    console.log('WINNER: ' + this.board.players[0].name);
+                } else {
+                    console.log('WINNER: ' + this.board.players[1].name);
+                }
+                break;
+            }
         }
+        
     }
 
     checkVertical() {
@@ -33,4 +45,6 @@ class Winchecker {
     checkDiagonalLeft() {
 
     }
+
+    
 }
