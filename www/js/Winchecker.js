@@ -20,6 +20,9 @@ class Winchecker {
         if(slot.y>=3){
             this.checkVertical();
         }
+        if(slot.x<=3 && slot.y>=4) {
+            this.checkDiagonalDownRight();
+        }
         
 
     }
@@ -65,13 +68,33 @@ class Winchecker {
         }
     }
 
-    checkDiagonalRight() {
+    checkDiagonalDownRight() {
+        let counter = 0;
+        let horiz = this.xPos;
+        for(let i = this.yPos;i>=0;i--){
+            if (this.color === App.game.board.colArray[(horiz)].slots[i].color)  {
+                horiz++;
+                counter++;
+            } else break;
+            if (counter === 4){
+                console.log('FOUR IN A ROW-DOWN-RIGHT');
+                this.win();
+                break;
+            }
+        }
 
     }
-    checkDiagonalLeft() {
+
+    checkDiagonalUpRight() {
+
+    }
+    checkDiagonalDownLeft() {
 
     }
 
+    checkDiagonalUpLeft() {
+
+    }
     win() {
         if(this.color==='red'){
             console.log('WINNER: ' + this.board.players[0].name);
