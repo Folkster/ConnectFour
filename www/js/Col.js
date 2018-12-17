@@ -12,7 +12,7 @@ class Col extends Component {
 
 
   createSlots() {
-    for (let y = 5; y >= 0; y--) {
+    for (let y = 0; y <= 5; y++) {
       this.slots.push(new Slot(this, this.x, y));
     }
   }
