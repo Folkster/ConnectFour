@@ -4,8 +4,6 @@ class Arrow extends Component {
         this.col = col;
         this.addEvents({
             'click .next-turn': 'arrowClick',
-            /*             'click .next-turn': 'switchPlayer'
-             */
         });
     }
 

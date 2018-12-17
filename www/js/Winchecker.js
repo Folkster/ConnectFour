@@ -21,16 +21,21 @@ class Winchecker {
             this.checkVertical();
         }
         if(slot.x<=3 && slot.y>=3) {
-            this.checkDiagonalDownRight();
+            this.checkDownRight();
         }
         if(slot.x<=3 && slot.y<=2) {
-          this.checkDiagonalUpRight();
+          this.checkUpRight();
         }
         if(slot.x>=3 && slot.y>=3) {
-            this.checkDiagonalDownLeft();
+            this.checkDownLeft();
         }
         if(slot.x>=3 && slot.y<=2) {
-          this.checkDiagonalUpLeft();
+          this.checkUpLeft();
+        }
+
+        if(slot.x>=1 && slot.x>=5){
+            this.checkUpLeftDownRight();
+            this.checkUpRightDownLeft();
         }
         
 
@@ -78,7 +83,7 @@ class Winchecker {
         }
     }
 
-    checkDiagonalDownRight() {
+    checkDownRight() {
         let counter = 0;
         let horiz = this.xPos;
         for(let i = this.yPos;i>=0;i--){
@@ -93,7 +98,7 @@ class Winchecker {
         }
     }
 
-    checkDiagonalUpRight() {
+    checkUpRight() {
         let counter = 0;
         let horiz = this.xPos;
         for(let i = this.yPos ; i<=5 ; i++){
@@ -107,7 +112,8 @@ class Winchecker {
             }
         }    
     }
-    checkDiagonalDownLeft() {
+
+    checkDownLeft() {
         let counter = 0;
         let horiz = this.xPos;
         for(let i = this.yPos;i>=0;i--){
@@ -122,7 +128,7 @@ class Winchecker {
         }
     }
 
-    checkDiagonalUpLeft() {
+    checkUpLeft() {
         let counter = 0;
         let horiz = this.xPos;
         for(let i = this.yPos ; i<=5 ; i++){
@@ -136,7 +142,15 @@ class Winchecker {
             }
         }  
     }
-    
+
+    checkUpRightDownLeft() {
+
+    }
+
+    checkUpLeftDownRight() {
+
+    }
+
     win() {
         if(this.color==='red'){
             console.log('WINNER: ' + this.board.players[0].name);
@@ -144,6 +158,5 @@ class Winchecker {
             console.log('WINNER: ' + this.board.players[1].name);
         }
     }
-
 
 }
