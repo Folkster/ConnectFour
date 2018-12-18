@@ -5,7 +5,8 @@ class GamePage extends Component {
     this.addRoute('/play', 'Play Game');
     this.addEvents({
       'click .start-game': 'start',
-      'click .nav-switch': 'navSwitch'
+      'click .nav-switch': 'navSwitch',
+      'keyup .to-add': 'addOnEnter'
     });
     this.showDetails = false;
     this.startGame = false;
@@ -47,4 +48,13 @@ class GamePage extends Component {
       this.render();
     }
   }
+
+  addOnEnter(e){
+    if(e.which === 13){
+      this.start();
+    }
+  }
+
+ 
+
 }
