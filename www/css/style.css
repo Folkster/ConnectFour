@@ -104,6 +104,14 @@ a:hover{
   color: var(--FOURLIGHTGREY);
 }
 
+.hover-slot-red:hover {
+  color: red;
+}
+
+.hover-slot-yellow:hover {
+  color: yellow;
+}
+
 
 .jumbotron {
 padding: 0;
