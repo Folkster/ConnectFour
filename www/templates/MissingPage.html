@@ -1,4 +1,16 @@
 <div>
-  <h2>The page is missing</h2>
-  <p>We are sorry but we can't find the page <i>${location.pathname}</i>.</p>
+    ${App.resetGamePage.startGame ? `
+      <h2>The page is missing</h2>
+      <p>We are sorry but we can't find the page <i>${location.pathname}</i>.</p>` : `
+      <h1 class="display-4 text-center">You rage quit!</h1>
+
+
+  <div class="row m-4">
+    <div class="col-12 col-md-8">
+      <h2>That means you lose</h2>
+      <p class="text-justify lead">
+        We recommend that you go grab a hot chocolate and try again later.</p> 
+      <img class="mb-4 img-fluid" src="https://i.ytimg.com/vi/In2t6r1vHiM/maxresdefault.jpg">
+    </div>` }
+
 </div>
