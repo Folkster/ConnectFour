@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="${this.color === 'red' ? `hover-slot-red` : `hover-slot-yellow` }">
+    <div class="">
         <div class="row">
-            <i style="color:${this.color}" class="pt-2 pb-2 fas fa-circle fa-4x slot" id="slot-${this.x}${this.y}"></i>
+            <i style="color:${this.color}" class="pt-2 pb-2 fas fa-circle fa-4x slot ${this.color === '' ? `hover-slot-red` : `hover-slot-yellow`}" id="slot-${this.x}${this.y}"></i>
         </div>
     </div>
 </div>
