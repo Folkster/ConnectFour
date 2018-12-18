@@ -1,7 +1,7 @@
 class Game {
     constructor(theBoard) {
         this.board = theBoard;
-        this.playerTurn = 'red';
+        this.playerTurn = 'darkred';
         this.stopGame = false;
         this.winchecker = new Winchecker(this.board);
         App.game = this;
@@ -9,10 +9,10 @@ class Game {
 
 
     nextTurn() {
-        if (App.game.playerTurn === 'red') {
-            App.game.playerTurn = 'yellow';
+        if (App.game.playerTurn === 'darkred') {
+            App.game.playerTurn = 'gold';
         } else {
-            App.game.playerTurn = 'red'
+            App.game.playerTurn = 'darkred'
         }
         this.board.render();
     }

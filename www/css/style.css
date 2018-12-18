@@ -1,10 +1,10 @@
 :root {
   /* COLOR SCHEME:  */
       --FOURGREY:      rgb(90, 90, 90);
-      --FOURYELLOW:    #F3D250;
+      --FOURYELLOW:    gold;
       --FOURLIGHTGREY: #ECECEC;
-      --GREYBLUE:     rgb(98, 149, 184);
-      --FOURBLUE:      #5DA2D5;
+      --GREYBLUE:     rgb(36, 93, 131);
+      --FOURBLUE:      rgb(68, 117, 155);
 }
 
 
@@ -146,7 +146,7 @@ padding: 0;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 .playerTwoColour {
-  color: yellow;
+  color: gold;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 /* ANIMATIONS FOR STARTPAGE */
@@ -169,7 +169,7 @@ padding: 0;
         to {
             opacity: 1;
             transform : translateY(0);
-            color: yellow;
+            color: gold;
         }
       }
 
@@ -192,7 +192,7 @@ padding: 0;
         to {
             opacity: 1;
             transform : translateY(0);
-            color: yellow;
+            color: gold;
         }
       }
 
@@ -215,7 +215,7 @@ padding: 0;
         to {
             opacity: 1;
             transform : translateY(0);
-            color: yellow;
+            color: gold;
         }
       }
 
@@ -238,7 +238,7 @@ padding: 0;
         to {
             opacity: 1;
             transform : translateY(0);
-            color: red;
+            color: darkred;
         }
       }
 
@@ -264,7 +264,7 @@ padding: 0;
 }
 
 .hover-slot-yellow:hover {
-  color: yellow;
+  color: gold;
 }
 
 

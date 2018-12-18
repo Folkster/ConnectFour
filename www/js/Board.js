@@ -30,7 +30,7 @@ class Board extends Component {
         //makes clickable again
         App.game.stopGame = false;
 
-        App.game.playerTurn = 'red';
+        App.game.playerTurn = 'darkred';
 
         this.render();
         console.log("play again har körts!")
