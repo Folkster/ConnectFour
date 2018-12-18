@@ -151,9 +151,109 @@ padding: 0;
 .playerTwoColour {
   color: yellow;
 }
+/* ANIMATIONS FOR STARTPAGE */
+      .startPageBlobOne {
+        animation-name: startPageBlobOneAnim;
+        animation-delay: 1s;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+
+      @keyframes startPageBlobOneAnim {
+        from {
+            opacity: 0;
+            transform: translateY(-400px);
+            color: inherit;
+      }
+
+        to {
+            opacity: 1;
+            transform : translateY(0);
+            color: yellow;
+        }
+      }
+
+      .startPageBlobTwo {
+        animation-name: startPageBlobTwoAnim;
+        animation-delay: 2s;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+      
+      @keyframes startPageBlobTwoAnim {
+        from {
+            opacity: 0;
+            transform: translateY(-400px);
+            color: inherit;
+      }
+      
+        to {
+            opacity: 1;
+            transform : translateY(0);
+            color: yellow;
+        }
+      }
+
+      .startPageBlobThree {
+        animation-name: startPageBlobThreeAnim;
+        animation-delay: 3s;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+      
+      @keyframes startPageBlobThreeAnim {
+        from {
+            opacity: 0;
+            transform: translateY(-400px);
+            color: inherit;
+      }
+      
+        to {
+            opacity: 1;
+            transform : translateY(0);
+            color: yellow;
+        }
+      }
+
+      .startPageBlobFour {
+        animation-name: startPageBlobFourAnim;
+        animation-delay: 4s;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+      
+      @keyframes startPageBlobFourAnim {
+        from {
+            opacity: 0;
+            transform: translateY(-400px);
+            color: inherit;
+      }
+      
+        to {
+            opacity: 1;
+            transform : translateY(0);
+            color: red;
+        }
+      }
 
 .slot {
   color: rgba(255, 255, 255, 0.87);
+}
+
+.slot:hover{
+  cursor: pointer;
+}
+
+.arrow:hover{
+  cursor: pointer;
 }
 
 .btn-pop:link,
