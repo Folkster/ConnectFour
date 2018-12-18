@@ -1,45 +1,45 @@
 <main>
- 
 
-        <div class="container row">
-            <div class="input-group py-2 col-md-6 col-sm-12">
-                
-                <h2 class="mb-2 col-12 mt-3 p-0">Player One</h2>
-                ${this.startGame ? `<p class="lead">${this.players[0]}</p>` :
-                `<input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters" value="player1">
-                <div class="col-12 mt-2 p-0">
-                    <div class="custom-control custom-radio custom-control-inline col-6">
-                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline1">Human</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline col-6">
-                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">AI</label>
-                    </div>
-                </div>` }
-            </div>
-            <div class="input-group py-2 col-md-6 col-sm-12">
-                <h2 class="mb-2  col-12 mt-3 p-0">Player Two</h2>
-                ${this.startGame ? `<p class="lead">${this.players[1]}</p>` : `
-                <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters" value="player2">
-                <div class="col-12 mt-2 p-0">
-                    <div class="custom-control custom-radio custom-control-inline col-6">
-                        <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline3">Human</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline col-6">
-                        <input type="radio" id="customRadioInline4" name="customRadioInline3" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline4">AI</label>
-                    </div>
-                </div>` }
-            </div>
+
+    <div class="container row">
+        <div class="input-group py-2 col-md-6 col-sm-12">
+
+            <h2 class="mb-2 col-12 mt-3 p-0">Player One</h2>
+            ${this.startGame ? `<p class="lead">${this.players[0]}</p>` :
+            `<input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters" value="player1">
+            <div class="col-12 mt-2 p-0">
+                <div class="custom-control custom-radio col-6">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Human</label>
+                </div>
+                <div class="custom-control custom-radio col-6">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">AI</label>
+                </div>
+            </div>` }
         </div>
-        ${this.showDetails ? `
-        <p class="lead text-danger pl-3">Character name must be between 2-20 characters</p>` : `` }
-        <div class="pl-3">
-            ${this.startGame ? `<a href="/board"><button type="button" class="btn btn-warning start-game nav-switch">Start
-                    Game</button></a>`:
-            `<a href="/play"><button type="button" class="btn btn-primary start-game">Add Players</button></a>` }
+        <div class="input-group py-2 col-md-6 col-sm-12">
+            <h2 class="mb-2  col-12 mt-3 p-0">Player Two</h2>
+            ${this.startGame ? `<p class="lead">${this.players[1]}</p>` : `
+            <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters" value="player2">
+            <div class="col-12 mt-2 p-0">
+                <div class="custom-control custom-radio col-6">
+                    <input type="radio" id="customRadioInline3" name="customRadioInline2" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">Human</label>
+                </div>
+                <div class="custom-control custom-radio col-6">
+                    <input type="radio" id="customRadioInline4" name="customRadioInline2" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline4">AI</label>
+                </div>
+            </div>` }
         </div>
+    </div>
+    ${this.showDetails ? `
+    <p class="lead text-danger pl-3">Character name must be between 2-20 characters</p>` : `` }
+    <div class="pl-3">
+        ${this.startGame ? `<a href="/board"><button type="button" class="btn btn-warning start-game nav-switch">Start
+                Game</button></a>`:
+        `<a href="/play"><button type="button" class="btn btn-primary start-game">Add Players</button></a>` }
+    </div>
 
 </main>
