@@ -6,7 +6,7 @@
 
             <h2 class="mb-2 col-12 mt-3 p-0">Player One</h2>
             ${this.startGame ? `<p class="lead">${this.players[0]}</p>` :
-            `<input type="text" class="form-control name-field1" placeholder="Name - 2-20 characters" value="player1">
+            `<input type="text" class="form-control name-field1 to-add" placeholder="Name - 2-20 characters">
             <div class="col-12 mt-2 p-0">
                 <div class="custom-control custom-radio col-6">
                     <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
@@ -21,7 +21,7 @@
         <div class="input-group py-2 col-md-6 col-sm-12">
             <h2 class="mb-2  col-12 mt-3 p-0">Player Two</h2>
             ${this.startGame ? `<p class="lead">${this.players[1]}</p>` : `
-            <input type="text" class="form-control name-field2" placeholder="Name - 2-20 characters" value="player2">
+            <input type="text" class="form-control name-field2 to-add" placeholder="Name - 2-20 characters" >
             <div class="col-12 mt-2 p-0">
                 <div class="custom-control custom-radio col-6">
                     <input type="radio" id="customRadioInline3" name="customRadioInline2" class="custom-control-input">
@@ -35,9 +35,9 @@
         </div>
     </div>
     ${this.showDetails ? `
-    <p class="lead text-danger pl-3">Character name must be between 2-20 characters</p>` : `` }
+    <p class="lead  validate-text">Both character names must be between 2-20 characters</p>` : `` }
     <div class="pl-3">
-        ${this.startGame ? `<a href="/board"><button type="button" class="btn btn-warning start-game nav-switch">Start
+        ${this.startGame ? `<a href="/board"><button type="button" class="enter-btn btn btn-warning start-game nav-switch">Start
                 Game</button></a>`:
         `<a href="/play"><button type="button" class="btn btn-primary start-game">Add Players</button></a>` }
     </div>
