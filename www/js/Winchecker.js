@@ -17,6 +17,7 @@ class Winchecker {
 
         if(this.counter !== 0 && slot.y >= 3) {
             this.checkVertical();
+            this.winCheck();
         }     
   /*       if (slot.x >= 3) {
             this.checkLeft();
@@ -73,13 +74,12 @@ class Winchecker {
     }
 
     checkVertical() {
-        this.counter = 1;
+        this.counter = 0;
         console.log('CHECKING VERTICAL');
         for (let i = this.yPos; i >= 0; i--) {
             if (this.color === App.game.board.colArray[(this.xPos)].slots[i].color) {
                 this.counter++;
             } else {
-                this.winCheck();
                 break;
             }
         }
