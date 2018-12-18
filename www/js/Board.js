@@ -2,8 +2,10 @@ class Board extends Component {
     constructor(thePlayers) {
         super();
         this.addRoute('/board', 'Connect 4 Game');
+        this.addEvents({
+            'click .play-again': 'playAgain'
+          });
         this.colArray = [];
-        this.slotNbr = 1;
         this.players = thePlayers;
         this.createCols();
         this.game = new Game(this);
@@ -13,11 +15,11 @@ class Board extends Component {
         for (let x = 0; x <= 6; x++) {
             this.colArray[x] = new Col(this, x);
         }
-        for (let i = 0; i < this.colArray.length; i++) {
-            for (let t = 0; t < this.colArray[i].slots.length; t++) {
-                this.slotNbr++;
-            }
-        }
+        
     }
 
+    playAgain(){
+        //logik häääär
+    }
+    
 }

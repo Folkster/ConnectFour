@@ -8,10 +8,10 @@ class Game {
 
 
     nextTurn() {
-        if (this.playerTurn === 'red') {
-            this.playerTurn = 'yellow';
+        if (App.game.playerTurn === 'red') {
+            App.game.playerTurn = 'yellow';
         } else {
-            this.playerTurn = 'red'
+            App.game.playerTurn = 'red'
         }
         this.board.render();
     }
