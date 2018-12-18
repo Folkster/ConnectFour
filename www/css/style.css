@@ -9,7 +9,8 @@
 
 
 body {
-  background-color: var(--GREYBLUE);
+    /* background-color: var(--GREYBLUE); */
+  background-image: linear-gradient(to right top, #0045b1, #004ab5, #004fb8, #0053bc, #0058bf, #0055be, #0053bd, #0050bc, #0045b5, #003bae, #002fa7, #00239f);
 }
 
 body>div {
@@ -133,6 +134,16 @@ padding: 0;
   background-color: var(--FOURPINK);
 }
 
+.hover-slot-red:hover {
+  /* color: darkred; */
+  background-image: linear-gradient(to right top, #ff000b, #ff0909, #ff1107, #ff1705, #ff1c03, #f71908, #f0170d, #e81510, #d70c16, #c60519, #b4011b, #a3001c);
+}
+
+.hover-slot-yellow:hover {
+  /* color: gold; */
+  background-image: linear-gradient(to left top, #e3e323, #dfe81d, #dbed16, #d6f30f, #d1f807, #d2fa11, #d2fd19, #d3ff1f, #dbff2c, #e2ff37, #e9ff41, #efff4a);
+}
+
 .top-content-break {
   margin: 10px;
   border: 0;
@@ -244,11 +255,10 @@ padding: 0;
 
 .slot {
   color: transparent;
-  background: #8d8d8d;
+  background-color: #fcfcfc;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  text-shadow: 0px 3px 3px rgba(255,255,255,0.5); 
 }
 
 .slot::before{
@@ -257,14 +267,6 @@ padding: 0;
 
 .slot:hover{
   cursor: pointer;
-}
-
-.hover-slot-red:hover {
-  color: darkred;
-}
-
-.hover-slot-yellow:hover {
-  color: gold;
 }
 
 
