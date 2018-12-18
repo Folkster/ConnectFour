@@ -137,7 +137,7 @@ class Winchecker {
     }
 
     winCheck() {
-        if (this.counter === 4) {
+        if (this.counter >= 4) {
             if (this.color === 'red') {
                 console.log('WINNER: ' + App.game.board.players[0].name);
                 App.game.disableGameBoard();
