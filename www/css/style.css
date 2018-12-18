@@ -3,7 +3,7 @@
       --FOURGREY:      rgb(90, 90, 90);
       --FOURYELLOW:    gold;
       --FOURLIGHTGREY: #ECECEC;
-      --GREYBLUE:     rgb(36, 93, 131);
+      --GREYBLUE:     rgb(40, 120, 173);
       --FOURBLUE:      rgb(68, 117, 155);
 }
 
@@ -142,7 +142,7 @@ padding: 0;
 }
 
 .playerOneColour {
-  color: #ff0000;
+  color: darkred;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 .playerTwoColour {
@@ -260,7 +260,7 @@ padding: 0;
 }
 
 .hover-slot-red:hover {
-  color: red;
+  color: darkred;
 }
 
 .hover-slot-yellow:hover {
@@ -304,7 +304,7 @@ padding: 0;
    .validate-text{
     text-shadow: 1px 2px 2px black;
     font-weight: bold;
-     color: red;
+     color: darkred;
     font-size: 1.5rem;
      margin-left: 12px;
      margin-top: 20px;

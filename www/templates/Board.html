@@ -1,10 +1,10 @@
 <div>
-    ${App.game.playerTurn === 'darkred' ? `<h1 class="text-center text-danger">${this.players[0].name}</h1>` : `<h1 class="text-center text-warning">${this.players[1].name}</h1>`
+    ${App.game.playerTurn === 'darkred' ? `<h1 class="text-center playerOneColour">${this.players[0].name}</h1>` : `<h1 class="text-center playerTwoColour">${this.players[1].name}</h1>`
     }
     
     <div class="justify-content-around row pl-5 pr-5 player-moves-display">
-        <h4 class="text-center text-danger">${this.players[0].name}: ${this.players[0].moves} moves</h4>
-        <h4 class="text-center text-warning">${this.players[1].name}: ${this.players[1].moves} moves</h4>
+        <h4 class="text-center playerOneColour">${this.players[0].name}: ${this.players[0].moves} moves</h4>
+        <h4 class="text-center playerTwoColour">${this.players[1].name}: ${this.players[1].moves} moves</h4>
     </div>
     <div class="container rounded game-bg text-center m-0 p-3">
         <div class="row d-flex the-board mr-3">
