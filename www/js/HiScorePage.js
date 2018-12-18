@@ -12,7 +12,8 @@ class HiScorePage extends Component {
         this.addNewPlayer('Anna', 4);
         this.addNewPlayer('Johan', 9);
         console.log(this.highScores);
-        this.sortArray();
+
+        App.highScores = this;
     }
 
     sortArray() {
@@ -23,5 +24,6 @@ class HiScorePage extends Component {
 
     addNewPlayer(name, score) {
         this.highScores.push(new HighScoreItem(name, score));
+        this.sortArray();
     }
 }

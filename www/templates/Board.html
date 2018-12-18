@@ -1,6 +1,7 @@
 <div>
     ${App.game.playerTurn === 'red' ? `<h1 class="text-center text-danger">${this.players[0].name}</h1>` : `<h1 class="text-center text-warning">${this.players[1].name}</h1>`
     }
+    
     <div class="justify-content-around row pl-5 pr-5 player-moves-display">
         <h4 class="text-center text-danger">${this.players[0].name}: ${this.players[0].moves} moves</h4>
         <h4 class="text-center text-warning">${this.players[1].name}: ${this.players[1].moves} moves</h4>

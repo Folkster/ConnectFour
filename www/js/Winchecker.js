@@ -143,8 +143,13 @@ class Winchecker {
         if (this.counter === 4) {
             if (this.color === 'red') {
                 console.log('WINNER: ' + this.board.players[0].name);
+                App.game.disableGameBoard();
+                App.game.displayWinner(this.board.players[0]);
+                
             } else {
-                console.log('WINNER: ' + this.board.players[1].name);
+                console.log('WINNER: ' + this.board.players[1]);
+                App.game.disableGameBoard();
+                App.game.displayWinner(this.board.players[1]);
             }
 
             this.counter = 0;
