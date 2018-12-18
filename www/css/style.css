@@ -23,6 +23,17 @@ main {
   
 }
 
+h1 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h3 {
+  font-family: 'Fredoka One', cursive;
+}
 
 nav {
   background-color: var(--FOURYELLOW);
