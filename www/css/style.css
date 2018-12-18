@@ -148,6 +148,14 @@ padding: 0;
   color: rgba(255, 255, 255, 0.87);
 }
 
+.slot:hover{
+  cursor: pointer;
+}
+
+.arrow:hover{
+  cursor: pointer;
+}
+
 .btn-pop:link,
 .btn-pop:visited {
   text-decoration: none;
