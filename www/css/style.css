@@ -23,6 +23,17 @@ main {
   
 }
 
+h1 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h3 {
+  font-family: 'Fredoka One', cursive;
+}
 
 nav {
   background-color: var(--FOURYELLOW);
@@ -153,6 +164,10 @@ a:hover{
      margin-right: 3rem;
    }
  
+
+  #rulesIcon {
+    color: var(--FOURYELLOW);
+  }
 
 
 @media screen and (max-width: 767px) {
