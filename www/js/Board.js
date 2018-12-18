@@ -19,7 +19,22 @@ class Board extends Component {
     }
 
     playAgain(){
-        //logik häääär
+        //reset moves
+        App.game.board.players[0].moves = 0;
+        App.game.board.players[1].moves = 0;
+
+        //making a new emty colArray, then puting in new slots
+        this.colArray = [];
+        this.createCols();
+
+        //makes clickable again
+        App.game.stopGame = false;
+
+        App.game.playerTurn = 'red';
+
+        this.render();
+        console.log("play again har körts!")
+
     }
     
 }

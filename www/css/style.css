@@ -181,7 +181,7 @@ padding: 0;
     text-shadow: 1px 2px 2px black;
     font-weight: bold;
      color: red;
-    font-size: 2rem;
+    font-size: 1.5rem;
      margin-left: 12px;
      margin-top: 20px;
 
@@ -189,6 +189,10 @@ padding: 0;
 
   #rulesIcon {
     color: var(--FOURYELLOW);
+  }
+
+  .christmas-image img{
+    width: 100%;
   }
 
 
@@ -214,6 +218,9 @@ padding: 0;
     flex-direction: column;
   }
 
+  .validate-text{
+    font-size: 1.1rem;
+  }
   
 }
 
@@ -280,9 +287,6 @@ padding: 0;
     margin-right: 0;
   }
 
-  .validate-text{
-    font-size: 1rem;
-    
-   }
+
 
 }
