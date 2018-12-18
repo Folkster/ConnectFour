@@ -3,7 +3,7 @@
       --FOURGREY:      rgb(90, 90, 90);
       --FOURYELLOW:    #F3D250;
       --FOURLIGHTGREY: #ECECEC;
-      --GREYBLUE: rgb(98, 149, 184);
+      --GREYBLUE:     rgb(98, 149, 184);
       --FOURBLUE:      #5DA2D5;
 }
 
@@ -64,11 +64,6 @@ a:hover{
   background-color: var(--FOURLIGHTBLUE);
   margin-bottom: 5rem;
 }
-
-/* .fourJumbotron p{
-  padding-left: 2rem;
-  text-align: justify;
-} */
 
 .four-carousel-container{
   margin-top: 1rem;
@@ -140,6 +135,13 @@ padding: 0;
   height: 1px;
   background: #333;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)), color-stop(50%, rgb(192, 192, 192)));
+}
+
+.playerOneColour {
+  color: red;
+}
+.playerTwoColour {
+  color: yellow;
 }
 
 .slot {
