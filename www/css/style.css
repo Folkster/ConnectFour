@@ -77,6 +77,11 @@ a:hover{
   height: auto;
 }
 
+address{
+  margin-bottom:0.5rem;
+  margin-top: 0.5rem;
+}
+
 .footerinfo {
   /* display: flex; */
   justify-content: space-around;
@@ -115,6 +120,7 @@ a:hover{
 .jumbotron {
 padding: 0;
 }
+
 
 .highscore-top {
   display: flex;
