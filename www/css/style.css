@@ -77,6 +77,11 @@ a:hover{
   height: auto;
 }
 
+address{
+  margin-bottom:0.5rem;
+  margin-top: 0.5rem;
+}
+
 .footerinfo {
   /* display: flex; */
   justify-content: space-around;
@@ -103,18 +108,10 @@ a:hover{
   color: var(--FOURLIGHTGREY);
 }
 
-.hover-slot-red:hover {
-  color: red;
-}
-
-.hover-slot-yellow:hover {
-  color: yellow;
-}
-
-
 .jumbotron {
 padding: 0;
 }
+
 
 .highscore-top {
   display: flex;
@@ -261,6 +258,15 @@ padding: 0;
 .slot:hover{
   cursor: pointer;
 }
+
+.hover-slot-red:hover {
+  color: red;
+}
+
+.hover-slot-yellow:hover {
+  color: yellow;
+}
+
 
 .arrow:hover{
   cursor: pointer;
