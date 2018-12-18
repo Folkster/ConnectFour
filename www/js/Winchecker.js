@@ -5,79 +5,81 @@ class Winchecker {
         this.xPos;
         this.yPos;
         this.color;
+        this.counter;
     }
 
     check(slot) {
         this.xPos = slot.x;
         this.yPos = slot.y;
         this.color = slot.color;
-        if(slot.x<=3){
-            this.checkRight();
-        }
-        if(slot.x>=3){
+       
+        this.checkHorizontal();
+
+        if(this.counter !== 0 && slot.y >= 3) {
+            this.checkVertical();
+            this.winCheck();
+        }     
+  /*       if (slot.x >= 3) {
             this.checkLeft();
         }
-        if(slot.y>=3){
+        if (slot.y >= 3) {
             this.checkVertical();
         }
-        if(slot.x<=3 && slot.y>=3) {
+        if (slot.x <= 3 && slot.y >= 3) {
             this.checkDownRight();
         }
-        if(slot.x<=3 && slot.y<=2) {
-          this.checkUpRight();
+        if (slot.x <= 3 && slot.y <= 2) {
+            this.checkUpRight();
         }
-        if(slot.x>=3 && slot.y>=3) {
+        if (slot.x >= 3 && slot.y >= 3) {
             this.checkDownLeft();
         }
-        if(slot.x>=3 && slot.y<=2) {
-          this.checkUpLeft();
+        if (slot.x >= 3 && slot.y <= 2) {
+            this.checkUpLeft();
         }
 
-        if(slot.x>=1 && slot.x>=5){
+        if (slot.x >= 1 && slot.x >= 5) {
             this.checkUpLeftDownRight();
             this.checkUpRightDownLeft();
-        }
-        
+        } */
+    }
 
+    checkHorizontal() {
+        this.counter = 1;
+        if (this.xPos <= 5 ){
+            this.checkRight();
+        }
+        if (this.xPos >= 1 ){
+            this.checkLeft();
+        }
+        this.winCheck();
     }
 
     checkRight() {
-        let counter = 0;
-        for(let i = this.xPos; i<=6 ;i++){
-            if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color)  {
-                counter++;
+        console.log('CHECKING RIGHT');
+        for (let i = this.xPos+1; i <= 6; i++) {
+            if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color) {
+                this.counter++;
             } else break;
-            if (counter === 4){
-                console.log('FOUR IN A ROW-RIGHT');
-                this.win();
-                break;
-            }
         }
     }
 
-    checkLeft (){
-        let counter = 0;
-        for(let i = this.xPos;i>=0;i--){
-            if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color)  {
-                counter++;
+    checkLeft() {
+        console.log('CHECKING LEFT');
+        for (let i = this.xPos-1; i >= 0; i--) {
+            if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color) {
+                this.counter++;
             } else break;
-            if (counter === 4){
-                console.log('FOUR IN A ROW-LEFT');
-                this.win();
-                break;
-            }
         }
     }
 
     checkVertical() {
-        let counter = 0;
-        for(let i = this.yPos;i>=0;i--){
-            if (this.color === App.game.board.colArray[(this.xPos)].slots[i].color)  {
-                counter++;
-            } else break;
-            if (counter === 4){
-                console.log('FOUR IN A ROW-VERTICAL');
-                this.win();
+        this.counter = 0;
+        console.log('CHECKING VERTICAL');
+        for (let i = this.yPos; i >= 0; i--) {
+            if (this.color === App.game.board.colArray[(this.xPos)].slots[i].color) {
+                this.counter++;
+            } else {
                 break;
             }
         }
@@ -86,11 +88,11 @@ class Winchecker {
     checkDownRight() {
         let counter = 0;
         let horiz = this.xPos;
-        for(let i = this.yPos;i>=0;i--){
-            if (this.color === App.game.board.colArray[(horiz++)].slots[i].color)  {
+        for (let i = this.yPos; i >= 0; i--) {
+            if (this.color === App.game.board.colArray[(horiz++)].slots[i].color) {
                 counter++;
             } else break;
-            if (counter === 4){
+            if (counter === 4) {
                 console.log('FOUR IN A ROW-DOWN-RIGHT');
                 this.win();
                 break;
@@ -101,26 +103,26 @@ class Winchecker {
     checkUpRight() {
         let counter = 0;
         let horiz = this.xPos;
-        for(let i = this.yPos ; i<=5 ; i++){
-            if (this.color === App.game.board.colArray[(horiz++)].slots[i].color)  {
+        for (let i = this.yPos; i <= 5; i++) {
+            if (this.color === App.game.board.colArray[(horiz++)].slots[i].color) {
                 counter++;
             } else break;
-            if (counter === 4){
+            if (counter === 4) {
                 console.log('FOUR IN A ROW-UP-RIGHT');
                 this.win();
                 break;
             }
-        }    
+        }
     }
 
     checkDownLeft() {
         let counter = 0;
         let horiz = this.xPos;
-        for(let i = this.yPos;i>=0;i--){
-            if (this.color === App.game.board.colArray[(horiz--)].slots[i].color)  {
+        for (let i = this.yPos; i >= 0; i--) {
+            if (this.color === App.game.board.colArray[(horiz--)].slots[i].color) {
                 counter++;
             } else break;
-            if (counter === 4){
+            if (counter === 4) {
                 console.log('FOUR IN A ROW-DOWN-LEFT');
                 this.win();
                 break;
@@ -131,16 +133,16 @@ class Winchecker {
     checkUpLeft() {
         let counter = 0;
         let horiz = this.xPos;
-        for(let i = this.yPos ; i<=5 ; i++){
-            if (this.color === App.game.board.colArray[(horiz--)].slots[i].color)  {
+        for (let i = this.yPos; i <= 5; i++) {
+            if (this.color === App.game.board.colArray[(horiz--)].slots[i].color) {
                 counter++;
             } else break;
-            if (counter === 4){
+            if (counter === 4) {
                 console.log('FOUR IN A ROW-UP-LEFT');
                 this.win();
                 break;
             }
-        }  
+        }
     }
 
     checkUpRightDownLeft() {
@@ -151,12 +153,17 @@ class Winchecker {
 
     }
 
-    win() {
-        if(this.color==='red'){
-            console.log('WINNER: ' + this.board.players[0].name);
-        } else {
-            console.log('WINNER: ' + this.board.players[1].name);
+    winCheck() {
+        if (this.counter === 4) {
+            if (this.color === 'red') {
+                console.log('WINNER: ' + this.board.players[0].name);
+            } else {
+                console.log('WINNER: ' + this.board.players[1].name);
+            }
+            this.counter = 0;
         }
-    }
+        
 
+    }
 }
+
