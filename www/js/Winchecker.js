@@ -144,7 +144,7 @@ class Winchecker {
             if (this.color === 'red') {
                 console.log('WINNER: ' + this.board.players[0].name);
                 App.game.disableGameBoard();
-                App.game.displayWinner(this.board.players[1]);
+                App.game.displayWinner(this.board.players[0]);
                 
             } else {
                 console.log('WINNER: ' + this.board.players[1]);
