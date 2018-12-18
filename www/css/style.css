@@ -108,15 +108,6 @@ address{
   color: var(--FOURLIGHTGREY);
 }
 
-.hover-slot-red:hover {
-  color: red;
-}
-
-.hover-slot-yellow:hover {
-  color: yellow;
-}
-
-
 .jumbotron {
 padding: 0;
 }
@@ -267,6 +258,15 @@ padding: 0;
 .slot:hover{
   cursor: pointer;
 }
+
+.hover-slot-red:hover {
+  color: red;
+}
+
+.hover-slot-yellow:hover {
+  color: yellow;
+}
+
 
 .arrow:hover{
   cursor: pointer;

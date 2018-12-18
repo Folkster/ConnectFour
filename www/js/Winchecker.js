@@ -115,7 +115,6 @@ class Winchecker {
         let horiz = this.xPos - 1;
         for (let i = this.yPos + 1; i <= 5; i++) {
             if (i >= 0 && i <= 5 && horiz >= 0 && horiz <= 6) {
-                console.log(App.game.board.colArray[(horiz)].slots[i])
                 if (this.color === App.game.board.colArray[(horiz--)].slots[i].color) {
                     this.counter++;
                     console.log(this.counter);
@@ -138,7 +137,7 @@ class Winchecker {
     }
 
     winCheck() {
-        if (this.counter === 4) {
+        if (this.counter >= 4) {
             if (this.color === 'red') {
                 console.log('WINNER: ' + App.game.board.players[0].name);
                 App.game.disableGameBoard();
