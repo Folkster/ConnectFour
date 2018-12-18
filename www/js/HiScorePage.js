@@ -13,6 +13,7 @@ class HiScorePage extends Component {
         this.addNewPlayer('Johan', 9);
         console.log(this.highScores);
         this.sortArray();
+        App.highScores = this;
     }
 
     sortArray() {
