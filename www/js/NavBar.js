@@ -16,7 +16,6 @@ class NavBar extends Component {
   }
 
   changeBackNav() {
-    // App.game.board.players = []; <= this empties the array, but causes a hard reload and error if it is used here
     // don't touch this and use this later when winchecker is fixed
     App.changeNav = false;
     App.globalNav.render();
