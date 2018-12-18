@@ -23,6 +23,17 @@ main {
   
 }
 
+h1 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h3 {
+  font-family: 'Fredoka One', cursive;
+}
 
 nav {
   background-color: var(--FOURYELLOW);
@@ -154,6 +165,10 @@ a:hover{
    }
  
 
+  #rulesIcon {
+    color: var(--FOURYELLOW);
+  }
+
 
 @media screen and (max-width: 767px) {
   .slot {
@@ -172,19 +187,66 @@ a:hover{
 
 @media screen and (max-width: 670px) {
   .slot {
-    font-size: 25px;
+    font-size: 35px;
   }
 
-  .arrow {
-    font-size: 25px;
+  .the-board{
+    justify-content: space-around;
   }
 
-  .footerinfo {
+  .player-moves-display{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .player-moves-display h4{
+      font-size: 100%;
+    }
+
+    .arrow {
+    font-size: 35px;
+    }
+
+    .footerinfo {
     display: flex;
     flex-direction: column;
-  }
+    }
 
   .rematch{
     margin-right: 0;
   }
+}
+
+@media screen and (max-height: 400px) {
+  .slot {
+    font-size: 30px;
+  }
+
+  .the-board{
+    justify-content: center;
+  }
+
+  .player-moves-display{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .player-moves-display h4{
+      font-size: 100%;
+    }
+
+    .arrow {
+    font-size: 30px;
+    }
+
+    .footerinfo {
+    display: flex;
+    flex-direction: column;
+    }
+
+  .rematch{
+    margin-right: 0;
+  }
+
+
 }
