@@ -42,7 +42,7 @@ class GamePage extends Component {
     if (this.startGame) {
       this.pageContent.board = new Board(this.players);
       this.render();
-    } else if (playerName1.length >= 2 && playerName1.length <= 20 && playerName2.length >= 2 && playerName2.length <= 20 && imHuman1 && imHuman2) {
+    } else if (playerName1.length >= 2 && playerName1.length <= 10 && playerName2.length >= 2 && playerName2.length <= 10 && imHuman1 && imHuman2) {
       this.players = [];
       this.players.push(new Player(playerName1));
       this.players.push(new Player(playerName2));
