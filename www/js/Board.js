@@ -9,14 +9,16 @@ class Board extends Component {
         this.players = thePlayers;
         this.createCols();
         this.game = new Game(this);
+        App.game.botCheck();
     }
 
     createCols() {
         for (let x = 0; x <= 6; x++) {
             this.colArray[x] = new Col(this, x);
         }
-        
     }
+
+
 
     playAgain(){
         //reset moves

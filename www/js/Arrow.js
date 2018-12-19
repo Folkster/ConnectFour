@@ -18,14 +18,11 @@ class Arrow extends Component {
                     } else {
                         App.game.board.players[1].moves++;
                     }
-                    this.switchPlayer();
+                    App.game.nextTurn();
 
                     break;
                 }
             }
         }
-    }
-    switchPlayer() {
-        App.game.nextTurn();
     }
 }
