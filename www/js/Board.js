@@ -37,7 +37,7 @@ class Board extends Component {
         App.game.playerTurn = 'darkred';
         this.winner = false;
         this.render();
-        
+        App.game.botCheck()
         console.log("play again har körts!")
 
     }
