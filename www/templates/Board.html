@@ -1,4 +1,28 @@
 <div>
+    ${this.winner ? ` 
+        <div class="jumbotron mt-3 p-4 winnerPopup text-center">
+            
+            ${App.game.playerTurn === 'darkred' ? 
+            `<h1 class="text-center playerTwoColour">Winner! ${this.players[1].name}</h1>` : 
+            `<h1 class="text-center playerOneColour">Winner! ${this.players[0].name}</h1>`
+            }
+<!-- 
+            <h1 class="display-4">Winner: ${App.game.playerTurn === 'darkred' ? `Gold` : `Red`} !</h1> -->
+            ${App.game.playerTurn === 'darkred' ? 
+            `<p class="text-center playerTwoColour"> ${this.players[1].moves} moves  </p>` : 
+            `<p class="text-center playerOneColour"> ${this.players[0].moves} moves</p>`
+            }
+            <hr class="my-4">
+            <a class="btn btn-primary btn-lg" href="/highscores" role="button">See Highscores</a>
+        </div>
+            ` : `` }
+
+
+
+
+
+
+
     ${App.game.playerTurn === 'darkred' ? `<h1 class="text-center playerOneColour">${this.players[0].name}</h1>` : `<h1 class="text-center playerTwoColour">${this.players[1].name}</h1>`
     }
     
