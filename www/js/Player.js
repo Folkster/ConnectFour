@@ -1,9 +1,10 @@
 class Player extends Component {
 
-    constructor(name) {
+    constructor(name, imHuman) {
         super();
         this.name = name;
+        this.bot = imHuman;
         this.moves = 0;
-        console.log(name);
+        console.log(name, this.bot);
     }
 }

@@ -34,18 +34,14 @@ class GamePage extends Component {
     let playerName2 = this.baseEl.find('.name-field2').val();
     let imHuman1 = this.baseEl.find('.player-one .human:checked').length > 0;
     let imHuman2 = this.baseEl.find('.player-two .human:checked').length > 0;
-    console.log(imHuman1);
-    console.log(imHuman2);
-    
- 
 
     if (this.startGame) {
       this.pageContent.board = new Board(this.players);
       this.render();
-    } else if (playerName1.length >= 2 && playerName1.length <= 10 && playerName2.length >= 2 && playerName2.length <= 10 && imHuman1 && imHuman2) {
+    } else if (playerName1.length >= 2 && playerName1.length <= 10 && playerName2.length >= 2 && playerName2.length <= 10) {
       this.players = [];
-      this.players.push(new Player(playerName1));
-      this.players.push(new Player(playerName2));
+      this.players.push(new Player(playerName1, imHuman1));
+      this.players.push(new Player(playerName2, imHuman2));
       this.valPlayer();
       App.changeNav = true;
       this.unmount();
