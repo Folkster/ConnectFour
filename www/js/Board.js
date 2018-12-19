@@ -8,6 +8,7 @@ class Board extends Component {
         this.colArray = [];
         this.players = thePlayers;
         this.createCols();
+        this.winner = false;
         this.game = new Game(this);
         App.game.botCheck();
     }
@@ -33,8 +34,9 @@ class Board extends Component {
         App.game.stopGame = false;
 
         App.game.playerTurn = 'darkred';
-
+        this.winner = false;
         this.render();
+        
         console.log("play again har körts!")
 
     }

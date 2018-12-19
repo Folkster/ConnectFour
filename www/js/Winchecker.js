@@ -150,6 +150,7 @@ class Winchecker {
 
     winCheck() {
         if (this.counter >= 4) {
+            App.game.board.winner = true;
             if (this.color === 'darkred') {
                 console.log('WINNER: ' + App.game.board.players[0].name);
                 console.log(this.winningSlots);
