@@ -151,7 +151,7 @@ address{
   border: 0;
   height: 1px;
   background: #333;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)), color-stop(50%, rgb(192, 192, 192)));
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(gold), to(gold), color-stop(50%, rgb(192, 192, 192)));
 }
 
 .playerOneColour {
@@ -327,6 +327,10 @@ address{
 
   .christmas-image img{
     width: 100%;
+  }
+
+  #highscores{
+    border-radius: 15px;
   }
 
 
