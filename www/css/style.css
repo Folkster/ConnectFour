@@ -104,10 +104,6 @@ address{
   color: #343a40;
 }
 
-.next-turn:hover {
-  color: var(--FOURLIGHTGREY);
-}
-
 .jumbotron {
   padding:0;  
   padding-left: 1.5rem;
