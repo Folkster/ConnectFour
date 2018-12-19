@@ -70,7 +70,7 @@ class Winchecker {
     checkVertical() {
         this.counter = 1;
         console.log('CHECKING VERTICAL');
-        for (let i = this.yPos-1; i >= 0; i--) {
+        for (let i = this.yPos - 1; i >= 0; i--) {
             if (this.color === App.game.board.colArray[(this.xPos)].slots[i].color) {
                 this.counter++;
                 this.winningSlots.push(App.game.board.colArray[(this.xPos)].slots[i]);
@@ -149,23 +149,27 @@ class Winchecker {
     }
 
     winCheck() {
-        if (this.counter >= 4) {
-            if (this.color === 'darkred') {
-                console.log('WINNER: ' + App.game.board.players[0].name);
-                console.log(this.winningSlots);
-                
-                App.game.disableGameBoard();
-                App.game.displayWinner(this.board.players[0]);
+        if (!App.game.board.players[0].isBot) {
+            if (!App.game.board.players[1].isBot) {
+                if (this.counter >= 4) {
+                    if (this.color === 'darkred') {
+                        console.log('WINNER: ' + App.game.board.players[0].name);
+                        console.log(this.winningSlots);
 
-            } else {
-                console.log('WINNER: ' + App.game.board.players[1].name);
-                console.log(this.winningSlots);
+                        App.game.disableGameBoard();
+                        App.game.displayWinner(this.board.players[0]);
 
-                App.game.disableGameBoard();
-                App.game.displayWinner(App.game.board.players[1]);
+                    } else {
+                        console.log('WINNER: ' + App.game.board.players[1].name);
+                        console.log(this.winningSlots);
+
+                        App.game.disableGameBoard();
+                        App.game.displayWinner(App.game.board.players[1]);
+                    }
+                    this.counter = 0;
+                }
+                this.winningSlots = [];
             }
-            this.counter = 0;
         }
-        this.winningSlots = [];
     }
 }
