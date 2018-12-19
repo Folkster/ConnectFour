@@ -105,7 +105,8 @@ address{
 }
 
 .jumbotron {
-padding: 0;
+  padding:0;  
+  padding-left: 1.5rem;
 }
 
 
@@ -254,10 +255,6 @@ padding: 0;
   background-clip: text;
 }
 
-.slot::before{
-  
-}
-
 .slot:hover{
   cursor: pointer;
 }
@@ -297,7 +294,7 @@ padding: 0;
  
 
    .validate-text{
-    text-shadow: 1px 2px 2px black;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
     font-weight: bold;
      color: darkred;
     font-size: 1.5rem;
@@ -318,6 +315,10 @@ padding: 0;
 @media screen and (max-width: 767px) {
   .slot {
     font-size: 40px;
+  }
+
+  .jumbotron{
+    padding-left: 0;
   }
 
 .play-connect{
