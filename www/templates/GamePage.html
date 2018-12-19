@@ -1,6 +1,6 @@
 <main>
 
-
+    ${this.startGame ? this.pageContent.board : `
     <div class="container row">
         <div class="player-one input-group py-2 col-md-6 col-sm-12">
 
@@ -37,13 +37,12 @@
     ${this.showDetails ? `
     <p class="lead  validate-text">Both character names must be between 2-20 characters</p>` : `` }
     <div class="pl-3">
-        ${this.startGame ? `<a href="/board"><button type="button" class="enter-btn btn btn-warning start-game nav-switch">Start
-                Game</button></a>`:
-        `<a href="/play"><button type="button" class="btn btn-primary start-game">Add Players</button></a>` }
+        <a href="/play"><button type="button" class="btn btn-primary start-game nav-switch">Start Game</button></a>
     </div>
 
     <div class="christmas-image">
         <img src="http://pngimg.com/uploads/christmas/christmas_PNG17222.png">
     </div>
+    `}
 
 </main>

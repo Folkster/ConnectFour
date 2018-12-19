@@ -1,7 +1,7 @@
 class Board extends Component {
     constructor(thePlayers) {
         super();
-        this.addRoute('/board', 'Connect 4 Game');
+        // this.addRoute('/board', 'Connect 4 Game');
         this.addEvents({
             'click .play-again': 'playAgain'
           });
