@@ -149,27 +149,32 @@ class Winchecker {
     }
 
     winCheck() {
-        if (!App.game.board.players[0].isBot) {
-            if (!App.game.board.players[1].isBot) {
-                if (this.counter >= 4) {
-                    if (this.color === 'darkred') {
-                        console.log('WINNER: ' + App.game.board.players[0].name);
-                        console.log(this.winningSlots);
 
-                        App.game.disableGameBoard();
-                        App.game.displayWinner(this.board.players[0]);
 
-                    } else {
-                        console.log('WINNER: ' + App.game.board.players[1].name);
-                        console.log(this.winningSlots);
+        if (this.counter >= 4) {
+            if (this.color === 'darkred') {
+                console.log('WINNER: ' + App.game.board.players[0].name);
+                console.log(this.winningSlots);
 
-                        App.game.disableGameBoard();
-                        App.game.displayWinner(App.game.board.players[1]);
-                    }
-                    this.counter = 0;
+                App.game.disableGameBoard();
+                if (App.game.board.players[0].isBot) {
+                    App.game.displayWinner(this.board.players[0]);
                 }
-                this.winningSlots = [];
+
+            } else {
+                console.log('WINNER: ' + App.game.board.players[1].name);
+                console.log(this.winningSlots);
+
+                App.game.disableGameBoard();
+
+                if (App.game.board.players[1].isBot) {
+                    App.game.displayWinner(App.game.board.players[1]);
+                }
             }
+            this.counter = 0;
         }
+        this.winningSlots = [];
+
+
     }
 }
