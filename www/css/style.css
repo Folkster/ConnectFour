@@ -64,6 +64,10 @@ a:hover{
   margin-bottom: 5rem;
 }
 
+.hide-at-win {
+  display: none;
+}
+
 .four-carousel-container{
   margin-top: 1rem;
 }
