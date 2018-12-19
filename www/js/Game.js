@@ -16,8 +16,18 @@ class Game {
         }
         this.board.render();
 
-        if(this.board.players[0].isBot){
+        if (this.board.players[0].isBot && this.playerTurn === 'darkred') {
+            let millisecondsToWait = 750;
+            setTimeout(function () {
+                App.game.botMove();
+            }, millisecondsToWait);
 
+        }
+        if (this.board.players[1].isBot && this.playerTurn === 'gold') {
+            let millisecondsToWait = 750;
+            setTimeout(function () {
+                App.game.botMove();
+            }, millisecondsToWait);
         }
 
     }
@@ -30,8 +40,8 @@ class Game {
         App.highScores.addNewPlayer(theWinner.name, theWinner.moves + 1);
     }
 
-    botCheck(){
-        if(App.game.board.players[0].isBot){
+    botCheck() {
+        if (App.game.board.players[0].isBot) {
             this.botMove();
         }
     }
