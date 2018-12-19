@@ -24,6 +24,12 @@
     "⚙": "HighScoreItem"
   },
   {
+    "name": "Peter",
+    "score": 7,
+    "timestamp": 1545225553810,
+    "⚙": "HighScoreItem"
+  },
+  {
     "name": "Johan",
     "score": 9,
     "timestamp": 1545225235433,
