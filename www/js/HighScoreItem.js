@@ -3,5 +3,6 @@ class HighScoreItem extends Component {
         super();
         this.name = playerName;
         this.score = playerScore;
+        this.timestamp = new Date().getTime();
     }
 }

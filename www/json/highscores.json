@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Anna",
+    "score": 4,
+    "timestamp": 1545225235432,
+    "⚙": "HighScoreItem"
+  },
+  {
+    "name": "Mr Second",
+    "score": 4,
+    "timestamp": 1545225309682,
+    "⚙": "HighScoreItem"
+  },
+  {
+    "name": "Emil",
+    "score": 5,
+    "timestamp": 1545225235420,
+    "⚙": "HighScoreItem"
+  },
+  {
+    "name": "Josefin",
+    "score": 6,
+    "timestamp": 1545225235418,
+    "⚙": "HighScoreItem"
+  },
+  {
+    "name": "Johan",
+    "score": 9,
+    "timestamp": 1545225235433,
+    "⚙": "HighScoreItem"
+  },
+  {
+    "name": "Anders",
+    "score": 11,
+    "timestamp": 1545225235421,
+    "⚙": "HighScoreItem"
+  }
+]
