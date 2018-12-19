@@ -37,7 +37,7 @@ class Game {
         this.stopGame = true;
     }
 
-    displayWinner(theWinner) {
+    addToHighscore(theWinner) {
         App.highScores.addNewPlayer(theWinner.name, theWinner.moves + 1);
     }
 
