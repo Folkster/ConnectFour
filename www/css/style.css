@@ -9,8 +9,7 @@
 
 
 body {
-    /* background-color: var(--GREYBLUE); */
-  background-image: linear-gradient(to right top, #0045b1, #004ab5, #004fb8, #0053bc, #0058bf, #0055be, #0053bd, #0050bc, #0045b5, #003bae, #002fa7, #00239f);
+  background-image: linear-gradient(to top, #366eff, #217dff, #138aff, #1d96ff, #33a2ff, #36a8ff, #3caeff, #44b4ff, #3ab6ff, #2fb8ff, #20baff, #08bcff);
 }
 
 body>div {
@@ -135,13 +134,11 @@ padding: 0;
 }
 
 .hover-slot-red:hover {
-  /* color: darkred; */
-  background-image: linear-gradient(to right top, #ff000b, #ff0909, #ff1107, #ff1705, #ff1c03, #f71908, #f0170d, #e81510, #d70c16, #c60519, #b4011b, #a3001c);
+  color: darkred;
 }
 
 .hover-slot-yellow:hover {
-  /* color: gold; */
-  background-image: linear-gradient(to left top, #e3e323, #dfe81d, #dbed16, #d6f30f, #d1f807, #d2fa11, #d2fd19, #d3ff1f, #dbff2c, #e2ff37, #e9ff41, #efff4a);
+  color: gold;
 }
 
 .top-content-break {
