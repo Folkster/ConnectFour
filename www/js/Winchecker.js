@@ -159,7 +159,7 @@ class Winchecker {
 
                 App.game.disableGameBoard();
                 if (!App.game.board.players[0].isBot) {
-                    App.game.displayWinner(this.board.players[0]);
+                    App.game.addToHighscore(this.board.players[0]);
                 }
 
             } else {
@@ -169,7 +169,7 @@ class Winchecker {
                 App.game.disableGameBoard();
 
                 if (!App.game.board.players[1].isBot) {
-                    App.game.displayWinner(App.game.board.players[1]);
+                    App.game.addToHighscore(App.game.board.players[1]);
                 }
             }
             this.counter = 0;
