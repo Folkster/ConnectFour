@@ -40,5 +40,11 @@ class Board extends Component {
         console.log("play again har körts!")
 
     }
+
+    showWinSlots(winningSlots){ 
+        for(let i = 0; i<winningSlots.length; i++ ){
+            
+        }    
+    }
     
 }

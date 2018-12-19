@@ -1,7 +1,6 @@
 class Winchecker {
 
-    constructor(board) {
-        this.board = board;
+    constructor() {
         this.xPos;
         this.yPos;
         this.color;
@@ -48,7 +47,6 @@ class Winchecker {
     }
 
     checkRight() {
-        console.log('CHECKING RIGHT');
         for (let i = this.xPos + 1; i <= 6; i++) {
             if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color) {
                 this.counter++;
@@ -58,7 +56,6 @@ class Winchecker {
     }
 
     checkLeft() {
-        console.log('CHECKING LEFT');
         for (let i = this.xPos - 1; i >= 0; i--) {
             if (this.color === App.game.board.colArray[(i)].slots[this.yPos].color) {
                 this.counter++;
@@ -69,7 +66,6 @@ class Winchecker {
 
     checkVertical() {
         this.counter = 1;
-        console.log('CHECKING VERTICAL');
         for (let i = this.yPos - 1; i >= 0; i--) {
             if (this.color === App.game.board.colArray[(this.xPos)].slots[i].color) {
                 this.counter++;
@@ -87,7 +83,6 @@ class Winchecker {
     }
 
     checkUpRight() {
-        console.log('CHECKING UP-RIGHT');
         let horiz = this.xPos + 1;
         for (let i = this.yPos + 1; i <= 5; i++) {
             if (i >= 0 && i <= 5 && horiz >= 0 && horiz <= 6) {
@@ -101,7 +96,6 @@ class Winchecker {
     }
 
     checkDownLeft() {
-        console.log('CHECKING DOWN-LEFT');
         let horiz = this.xPos - 1;
         for (let i = this.yPos - 1; i >= 0; i--) {
             if (i >= 0 && i <= 5 && horiz >= 0 && horiz <= 6) {
@@ -121,7 +115,6 @@ class Winchecker {
     }
 
     checkUpLeft() {
-        console.log('CHECKING UP-LEFT');
         let horiz = this.xPos - 1;
         for (let i = this.yPos + 1; i <= 5; i++) {
             if (i >= 0 && i <= 5 && horiz >= 0 && horiz <= 6) {
@@ -135,7 +128,6 @@ class Winchecker {
     }
 
     checkDownRight() {
-        console.log('CHECKING DOWN-RIGHT');
         let horiz = this.xPos + 1;
         for (let i = this.yPos - 1; i >= 0; i--) {
             if (i >= 0 && i <= 5 && horiz >= 0 && horiz <= 6) {
@@ -149,33 +141,31 @@ class Winchecker {
     }
 
     winCheck() {
-
-
         if (this.counter >= 4) {
             App.game.board.winner = true;
+            App.game.disableGameBoard();
             if (this.color === 'darkred') {
-                console.log('WINNER: ' + App.game.board.players[0].name);
-                console.log(this.winningSlots);
-
-                App.game.disableGameBoard();
                 if (!App.game.board.players[0].isBot) {
-                    App.game.addToHighscore(this.board.players[0]);
+                    App.game.addToHighscore(App.game.board.players[0]);
                 }
 
             } else {
-                console.log('WINNER: ' + App.game.board.players[1].name);
-                console.log(this.winningSlots);
-
-                App.game.disableGameBoard();
-
                 if (!App.game.board.players[1].isBot) {
                     App.game.addToHighscore(App.game.board.players[1]);
                 }
             }
             this.counter = 0;
+            this.showWinSlots();
         }
         this.winningSlots = [];
 
 
+    }
+
+    showWinSlots(){ 
+        for(let i = 0; i<this.winningSlots.length; i++ ){
+            App.game.board.colArray[this.winningSlots[i].x].slots[this.winningSlots[i].y].winningSlot = true;
+            console.log("Winningslot: " + App.game.board.colArray[this.winningSlots[i].x].slots[this.winningSlots[i].y].winningSlot);
+        }    
     }
 }

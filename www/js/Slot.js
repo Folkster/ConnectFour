@@ -6,6 +6,7 @@ class Slot extends Component {
         this.y = y;
         this.player;
         this.color = '';
+        this.winningSlot = false;
         this.addEvents({
             'click .slot': 'slotClick',
             

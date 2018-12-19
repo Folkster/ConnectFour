@@ -11,8 +11,6 @@ class HiScorePage extends Component {
         this.addNewPlayer('Anders', 11);
         this.addNewPlayer('Anna', 4);
         this.addNewPlayer('Johan', 9);
-        console.log(this.highScores);
-
         App.highScores = this;
     }
 
