@@ -9,6 +9,7 @@ class Board extends Component {
         this.players = thePlayers;
         this.createCols();
         this.winner = false;
+        this.tie = false;
         this.game = new Game(this);
         App.game.botCheck();
     }
