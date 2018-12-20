@@ -18,7 +18,7 @@ class Game {
         }
         console.log("nextrurn2")
         if (this.board.players[0].isBot && this.playerTurn === 'darkred') {
-            let millisecondsToWait = 50;
+            let millisecondsToWait = 750;
             setTimeout(function () {
                 console.log("nextrurnbot1")
                 App.game.botMove();
@@ -27,7 +27,7 @@ class Game {
         }
 
         if (this.board.players[1].isBot && this.playerTurn === 'gold') {
-            let millisecondsToWait = 50;
+            let millisecondsToWait = 750;
             setTimeout(function () {
                 console.log("nextrurnbot2")
                 App.game.botMove();
