@@ -41,8 +41,8 @@ class GamePage extends Component {
       this.render();
     } else if (playerName1.length >= 2 && playerName1.length <= 20 && playerName2.length >= 2 && playerName2.length <= 20) {
       this.players = [];
-      this.players.push(new Player(playerName1, imHuman1));
-      this.players.push(new Player(playerName2, imHuman2));
+      this.players.push(new Player(playerName1, imHuman1, 'darkred'));
+      this.players.push(new Player(playerName2, imHuman2, 'gold'));
       this.valPlayer();
       App.changeNav = true;
       this.unmount();

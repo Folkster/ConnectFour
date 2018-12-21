@@ -4,7 +4,6 @@ class Game {
         this.playerTurn = 'darkred';
         this.stopGame = false;
         this.winchecker = new Winchecker(this.board);
-        this.recursiveController = 0;
         App.game = this;
     }
 
@@ -42,8 +41,8 @@ class Game {
     }
 
     botCheck() {
-        if (App.game.board.players[0].isBot) {
-            this.botMove();
+        if (App.game.board.players[0].isBot) {            
+            this.botMove();            
         }
     }
 
@@ -63,7 +62,6 @@ class Game {
                     } else {
                         App.game.board.players[1].moves++;
                     }
-
                     App.game.nextTurn();
                     break;
                 } 
