@@ -37,7 +37,6 @@ class GamePage extends Component {
     let imHuman2 = this.baseEl.find('.player-two .human:checked').length > 0;
 
     if (this.startGame) {
-      console.log("YIAAAAA")
       this.pageContent.board = new Board(this.players);
       this.render();
     } else if (playerName1.length >= 2 && playerName1.length <= 20 && playerName2.length >= 2 && playerName2.length <= 20) {

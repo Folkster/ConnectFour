@@ -5,6 +5,5 @@ class Player extends Component {
         this.name = name;
         this.isBot = !imHuman;
         this.moves = 0;
-        console.log(this.name, this.isBot);
     }
 }

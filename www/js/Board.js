@@ -38,7 +38,6 @@ class Board extends Component {
         this.winner = false;
         this.render();
         App.game.botCheck()
-        console.log("play again har körts!")
 
     }
 

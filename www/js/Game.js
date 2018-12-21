@@ -10,32 +10,26 @@ class Game {
 
 
     nextTurn() {
-        console.log("nextrurn1")
         if (App.game.playerTurn === 'darkred') {
             App.game.playerTurn = 'gold';
         } else {
             App.game.playerTurn = 'darkred'
         }
-        console.log("nextrurn2")
         if (this.board.players[0].isBot && this.playerTurn === 'darkred') {
-            let millisecondsToWait = 750;
+            let millisecondsToWait = 1000;
             setTimeout(function () {
-                console.log("nextrurnbot1")
                 App.game.botMove();
             }, millisecondsToWait);
 
         }
 
         if (this.board.players[1].isBot && this.playerTurn === 'gold') {
-            let millisecondsToWait = 750;
+            let millisecondsToWait = 1000;
             setTimeout(function () {
-                console.log("nextrurnbot2")
                 App.game.botMove();
             }, millisecondsToWait);
         }
-        console.log("nextrurn4")
         this.board.render();
-        console.log("nextrurn5")
 
     }
 
@@ -69,8 +63,7 @@ class Game {
                     } else {
                         App.game.board.players[1].moves++;
                     }
-                    //console.log(App.game.playerTurn);
-                   // console.log(App.game.board.colArray[col].slots[i]);
+
                     App.game.nextTurn();
                     break;
                 } 
