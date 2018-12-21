@@ -165,7 +165,6 @@ class Winchecker {
     showWinSlots(){ 
         for(let i = 0; i<this.winningSlots.length; i++ ){
             App.game.board.colArray[this.winningSlots[i].x].slots[this.winningSlots[i].y].winningSlot = true;
-            console.log("Winningslot: " + App.game.board.colArray[this.winningSlots[i].x].slots[this.winningSlots[i].y].winningSlot);
         }    
     }
 }

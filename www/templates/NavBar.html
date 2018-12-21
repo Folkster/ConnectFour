@@ -1,8 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1 pl-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 lead">
   <a class="navbar-brand" href="#">
-    <!-- OLD LOGO -->
-      <!-- </nav><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i
-      class="fas fa-circle"></i> -->
     <picture class="size-fix">
       <img src="img/logo.jpg" alt="logo" class="img-thumbnail">
     </picture>
@@ -13,17 +10,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     ${ App.changeNav ? `
-    <ul class="navbar-nav mr-auto">
-      <a href="#"><button class="btn btn-secondary mr-3 mt-1 mb-1" disabled>${this.navItems[0].name}</button></a>
-      <a href="${this.navItems[4].url}" class="col-4 mr-3 mt-1 mb-1 btn btn-danger nav-switch-back btn-pop">${this.navItems[4].name}</a>
-      <a href="#"><button class="btn btn-secondary mr-3 mt-1 mb-1" disabled>${this.navItems[2].name}</button></a>
-      <a href="#"><button class="btn btn-secondary mr-3 mt-1 mb-1" disabled>${this.navItems[3].name}</button></a>
+    <ul class="navbar-nav m-0 p-0 text-white">
+      <p class="m-0 p-0 mr-3 pl-4 mb-0" href="#">${this.navItems[0].name}</p>
+      <a class="m-0 p-0 mr-3 pl-4 text-danger nav-switch-back" href="${this.navItems[4].url}" class="text-danger">${this.navItems[4].name}</a>
+      <p class="m-0 p-0 mr-3 pl-4 mb-0" href="#">${this.navItems[2].name}</p>
+      <p class="m-0 p-0 mr-3 pl-4" href="#">${this.navItems[3].name}</p>
     </ul>` : `
-    <ul class="navbar-nav mr-auto">
-      <a href="${this.navItems[0].url}"><button class="mr-3 mt-1 mb-1 btn btn-secondary btn-pop mb-1 mt-1">${this.navItems[0].name}</button></a>
-      <a href="${this.navItems[1].url}"><button class="mr-3 mt-1 mb-1 btn btn-secondary btn-pop mb-1 mt-1">${this.navItems[1].name}</button></a>
-      <a href="${this.navItems[2].url}"><button class="mr-3 mt-1 mb-1 btn btn-secondary btn-pop mb-1 mt-1">${this.navItems[2].name}</button></a>
-      <a href="${this.navItems[3].url}"><button class="mr-3 mt-1 mb-1 btn btn-secondary btn-pop mb-1 mt-1">${this.navItems[3].name}</button></a>
+    <ul class="navbar-nav m-0 p-0 text-white">
+      <a class="mr-3 pl-4" href="${this.navItems[0].url}">${this.navItems[0].name}</a>
+      <a class="mr-3 pl-4" href="${this.navItems[1].url}">${this.navItems[1].name}</a>
+      <a class="mr-3 pl-4" href="${this.navItems[2].url}">${this.navItems[2].name}</a>
+      <a class="mr-3 pl-4" href="${this.navItems[3].url}">${this.navItems[3].name}</a>
     </ul>
     `}
   </div>
+</nav>

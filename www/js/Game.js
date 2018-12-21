@@ -4,38 +4,31 @@ class Game {
         this.playerTurn = 'darkred';
         this.stopGame = false;
         this.winchecker = new Winchecker(this.board);
-        this.recursiveController = 0;
         App.game = this;
     }
 
 
     nextTurn() {
-        console.log("nextrurn1")
         if (App.game.playerTurn === 'darkred') {
             App.game.playerTurn = 'gold';
         } else {
             App.game.playerTurn = 'darkred'
         }
-        console.log("nextrurn2")
         if (this.board.players[0].isBot && this.playerTurn === 'darkred') {
-            let millisecondsToWait = 750;
+            let millisecondsToWait = 1000;
             setTimeout(function () {
-                console.log("nextrurnbot1")
                 App.game.botMove();
             }, millisecondsToWait);
 
         }
 
         if (this.board.players[1].isBot && this.playerTurn === 'gold') {
-            let millisecondsToWait = 750;
+            let millisecondsToWait = 1000;
             setTimeout(function () {
-                console.log("nextrurnbot2")
                 App.game.botMove();
             }, millisecondsToWait);
         }
-        console.log("nextrurn4")
         this.board.render();
-        console.log("nextrurn5")
 
     }
 
@@ -48,8 +41,8 @@ class Game {
     }
 
     botCheck() {
-        if (App.game.board.players[0].isBot) {
-            this.botMove();
+        if (App.game.board.players[0].isBot) {            
+            this.botMove();            
         }
     }
 
@@ -69,8 +62,6 @@ class Game {
                     } else {
                         App.game.board.players[1].moves++;
                     }
-                    //console.log(App.game.playerTurn);
-                   // console.log(App.game.board.colArray[col].slots[i]);
                     App.game.nextTurn();
                     break;
                 } 
