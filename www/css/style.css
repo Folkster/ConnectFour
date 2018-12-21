@@ -28,6 +28,10 @@ h1, h2, h3, h4 {
 
 nav {
   background-color: var(--FOURYELLOW);
+  font-size: 2.5rem;
+}
+nav p, a {
+  font-size: 2rem;
 }
 
 footer {
